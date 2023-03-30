@@ -202,6 +202,8 @@ body{
     width: 410px;
     height: 410px;
     margin-left: 30px;
+    animation: ZoomIn 1s ease forwards, floatImage 3s ease-in-out infinite;
+    animation-delay: .1s, 1.1s
 }
 .Home-img .glowing-circle{
     position: relative;
@@ -229,6 +231,7 @@ body{
     height: 100%;
     background: linear-gradient(#f06,#3cf);
     border-radius: 50%;
+    animation: circleImage 5s linear infinite;
 }
 .glowing-circle span:nth-child(1){
     filter: blur(10px);
@@ -304,3 +307,35 @@ body{
         transform: translateY(0);
     }
 }
+
+@keyframes ZoomIn {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes floatImage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes circleImage {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+

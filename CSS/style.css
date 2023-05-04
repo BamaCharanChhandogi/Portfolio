@@ -349,8 +349,8 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
     width: 100%;
     height: auto;
     display: flex;
+    padding: 60px 20px;
     justify-content: space-between;
-    padding: 70px 20px;
 
 }
 #about img{
@@ -369,6 +369,8 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 }
 #about .about-text p{
     text-align: justify;
+    padding-top: 30px;
+   font-weight: 500;
 }
 /* #about .about-text:hover{
     position: relative;
@@ -394,7 +396,7 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 #about .social-link ul{
     margin-top: 30px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-around;
 }
 #about .social-link li{
     padding: 10px;

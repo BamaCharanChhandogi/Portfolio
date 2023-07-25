@@ -2,11 +2,11 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
+import weather from "../../Assets/Projects/Weather.png";
+import food from "../../Assets/Projects/Food-Recipe.png";
 import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
+import Product from "../../Assets/Projects/Productlanding.png";
+import countdown from "../../Assets/Projects/Stopwatch.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
 function Projects() {
@@ -18,27 +18,28 @@ function Projects() {
           My Recent <strong className="purple">Works </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Here are a few main projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={Product}
               isBlog={false}
               title="Product Landing Page"
-              description="Simple Ecommerce Site"
+              description="Its basically simple Ecomerce site.
+              Its use in HTML CSS and JavaScript.Its my first Year project."
               ghLink="https://github.com/BamaCharanChhandogi/Product-Landing-Page"
               demoLink="https://bamacharanchhandogi.github.io/Product-Landing-Page/"
             />
           </Col>
 
-          {/* <Col md={4} className="project-card">
+          <Col md={4} className="project-card">
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
               title="Bits-0f-C0de"
               description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
+              ghLink="https://github.com/s"
               demoLink="https://blogs.soumya-jit.tech/"
             />
           </Col>
@@ -54,39 +55,43 @@ function Projects() {
             />
           </Col>
 
+          <h1 className="Project-subHeading"> <strong className="purple">Simple</strong> Project</h1>
+          <p style={{ color: "white" }}>
+          Here are a few simple projects.
+        </p>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={weather}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Weather-Site"
+              description="It is Weather-prediction site. Simple site using HTML,CSS,Javascript.Applied API concept"
+              ghLink="https://github.com/BamaCharanChhandogi/Weather-App"
+              demoLink="https://bamacharanchhandogi.github.io/Weather-App/"
             />
-          </Col> */}
+          </Col>
 
-          {/* <Col md={4} className="project-card">
+          <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={countdown}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Countdown-Timer"
+              description="its also Timer Count site. used HTML, CSS and basics Javascript.Applied API concept"
+              ghLink="https://github.com/BamaCharanChhandogi/Stopwatch"
+              demoLink="https://bamacharanchhandogi.github.io/Stopwatch/"
             />
-          </Col> */}
+          </Col>
 
-          {/* <Col md={4} className="project-card">
+          <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={food}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Food-Recipe"
+              description="it is basically Food-Recipe site. Where You can see the recipe of all popular food.
+              used HTML, CSS and basics javascript,Applied API concept."
+              ghLink="https://github.com/BamaCharanChhandogi/Chitkara-Mess"
+              demoLink="https://bamacharanchhandogi.github.io/Chitkara-Mess/"
             />
-          </Col> */}
+          </Col>
         </Row>
       </Container>
     </Container>

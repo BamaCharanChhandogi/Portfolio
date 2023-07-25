@@ -283,6 +283,9 @@ button:focus {
 .main-name {
   color: #cd5ff8;
 }
+.img-logo{
+  color: #cd5ff8;
+}
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
@@ -537,7 +540,11 @@ button:focus {
   font-weight: 500 !important;
   padding-top: 10px !important;
 }
-
+.Project-subHeading{
+  /* color: #6d20c5d7; */
+  font-weight: bold;
+  color: white;
+}
 /* --------- */
 /* About */
 /* --------- */

@@ -4,7 +4,9 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import weather from "../../Assets/Projects/Weather.png";
 import food from "../../Assets/Projects/Food-Recipe.png";
+import ecart from "../../Assets/Projects/ecart.png";
 import editor from "../../Assets/Projects/codeEditor.png";
+import instabasic from "../../Assets/Projects/instaclone-basic.png";
 import Product from "../../Assets/Projects/Productlanding.png";
 import countdown from "../../Assets/Projects/Stopwatch.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
@@ -90,6 +92,28 @@ function Projects() {
               used HTML, CSS and basics javascript,Applied API concept."
               ghLink="https://github.com/BamaCharanChhandogi/Chitkara-Mess"
               demoLink="https://bamacharanchhandogi.github.io/Chitkara-Mess/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ecart}
+              isBlog={false}
+              title="Shopping Page with React"
+              description="it is basically Shopping site. Where You can see the add T-shirts in cart.
+              used HTML, CSS and basics javascript(React),Applied ContextAPI and Router concept."
+              ghLink="https://github.com/BamaCharanChhandogi/e-cart"
+              demoLink="https://e-cart-alpha.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={instabasic}
+              isBlog={false}
+              title="basic social media with React"
+              description="it is basically Social site. Where You can add photo in firebase.
+              used HTML, CSS and basics javascript(React),Applied Meterial UI and Authentication concept."
+              ghLink="https://github.com/BamaCharanChhandogi/instagram-clone-react"
+              // demoLink="https://e-cart-alpha.vercel.app/"
             />
           </Col>
         </Row>

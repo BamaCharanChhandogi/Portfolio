@@ -7,7 +7,7 @@ import food from "../../Assets/Projects/Food-Recipe.png";
 import ecart from "../../Assets/Projects/ecart.png";
 import editor from "../../Assets/Projects/codeEditor.png";
 import instabasic from "../../Assets/Projects/instaclone-basic.png";
-import Product from "../../Assets/Projects/Productlanding.png";
+import github from "../../Assets/Projects/github.png";
 import countdown from "../../Assets/Projects/Stopwatch.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
@@ -35,16 +35,16 @@ function Projects() {
             />
           </Col>
 
-          {/* <Col md={4} className="project-card">
+          <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={github}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/s"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Github-Profile-View"
+              description="This is a GitHub profile viewer site. If you enter the username of any person who uses a GitHub account, you can view their profile here. We utilized the GitHub API and React for its development"
+              ghLink="https://github.com/BamacharanChhandogi/github-profile-view"
+              demoLink="https://github-profile-view-sigma.vercel.app/"
             />
-          </Col> */}
+          </Col>
 
           {/* <Col md={4} className="project-card">
             <ProjectCard

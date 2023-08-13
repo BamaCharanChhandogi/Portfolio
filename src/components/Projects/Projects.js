@@ -5,11 +5,10 @@ import Particle from "../Particle";
 import weather from "../../Assets/Projects/Weather.png";
 import food from "../../Assets/Projects/Food-Recipe.png";
 import ecart from "../../Assets/Projects/ecart.png";
-import editor from "../../Assets/Projects/codeEditor.png";
+import Product from "../../Assets/Projects/Productlanding.png";
 import instabasic from "../../Assets/Projects/instaclone-basic.png";
 import github from "../../Assets/Projects/github.png";
 import countdown from "../../Assets/Projects/Stopwatch.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
 
 function Projects() {
   return (

@@ -9,6 +9,8 @@ import Product from "../../Assets/Projects/Productlanding.png";
 import instabasic from "../../Assets/Projects/instaclone-basic.png";
 import github from "../../Assets/Projects/github.png";
 import countdown from "../../Assets/Projects/Stopwatch.png";
+import Todo from "../../Assets/Projects/To-do.png";
+import WordCount from "../../Assets/Projects/Wordcounter.png";
 
 function Projects() {
   return (
@@ -102,6 +104,28 @@ function Projects() {
               used HTML, CSS and basics javascript(React),Applied ContextAPI and Router concept."
               ghLink="https://github.com/BamaCharanChhandogi/e-cart"
               demoLink="https://e-cart-alpha.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Todo}
+              isBlog={false}
+              title="To-Do List APP"
+              description="it is basically To Do List. Where You can add task or text.
+              used HTML, CSS and basics javascript(React)"
+              ghLink="https://github.com/BamaCharanChhandogi/To-Do-List"
+              demoLink="https://bamacharanchhandogi.github.io/To-Do-List/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={WordCount}
+              isBlog={false}
+              title="Word Counter"
+              description="it is basically Word Counter. Where You can count total word in sentences.
+              used HTML, CSS and basics javascript(React)."
+              ghLink="https://github.com/BamaCharanChhandogi/Word-Counter"
+              demoLink="https://bamacharanchhandogi.github.io/Word-Counter/"
             />
           </Col>
           <Col md={4} className="project-card">

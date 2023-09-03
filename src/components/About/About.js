@@ -6,33 +6,24 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import myimg from "../../Assets/IMG_20220705_183813.jpg";
 import Toolstack from "./Toolstack";
+import Education from "./Education";
+import Experienced from "./Experienced";
+import './About.css';
 
 function About() {
   return (
     <Container fluid className="about-section">
-      <Particle />
+      {/* <Particle /> */}
       <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col
-            md={7}
-            style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
-            }}
-          >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+        <Row className="about-main"> 
+        <h1 style={{ fontSize: "2.1em", marginBottom: "40px" }}>
+               <strong className="purple">My Education & Experiance</strong>
             </h1>
-            <Aboutcard />
+        <Col className="education-sec"> 
+        <Education/>           
           </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={myimg} alt="about" className="img-fluid" 
-            style={{borderRadius:"30px"}} />
+          <Col className="about-Exp">
+            <Experienced/>
           </Col>
         </Row>
         <h1 className="project-heading">

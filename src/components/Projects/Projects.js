@@ -8,6 +8,7 @@ import ecart from "../../Assets/Projects/ecart.png";
 import Product from "../../Assets/Projects/Productlanding.png";
 import instabasic from "../../Assets/Projects/instaclone-basic.png";
 import github from "../../Assets/Projects/github.png";
+import Quora from "../../Assets/Projects/quora.png";
 import countdown from "../../Assets/Projects/Stopwatch.png";
 import Todo from "../../Assets/Projects/To-do.png";
 import WordCount from "../../Assets/Projects/Wordcounter.png";
@@ -33,6 +34,17 @@ function Projects() {
               Its use in HTML CSS and JavaScript.Its my first Year project."
               ghLink="https://github.com/BamaCharanChhandogi/Product-Landing-Page"
               demoLink="https://bamacharanchhandogi.github.io/Product-Landing-Page/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Quora}
+              isBlog={false}
+              title="Quora Clone"
+              description="It's basically Quora clone using React and Firebase. It's my 3rd sem project
+              I have learned a lot concepts about React. I have also learned how to create a clone of React."
+              ghLink="https://github.com/BamaCharanChhandogi/Quora-Clone"
+              demoLink="https://quora-clone-eight.vercel.app/"
             />
           </Col>
 

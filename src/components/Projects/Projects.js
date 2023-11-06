@@ -9,6 +9,7 @@ import Product from "../../Assets/Projects/Productlanding.png";
 import instabasic from "../../Assets/Projects/instaclone-basic.png";
 import github from "../../Assets/Projects/github.png";
 import Quora from "../../Assets/Projects/quora.png";
+import BenChi from "../../Assets/Projects/Bengali-chitkarian.png";
 import countdown from "../../Assets/Projects/Stopwatch.png";
 import Todo from "../../Assets/Projects/To-do.png";
 import WordCount from "../../Assets/Projects/Wordcounter.png";
@@ -45,6 +46,17 @@ function Projects() {
               I have learned a lot concepts about React. I have also learned how to create a clone of React."
               ghLink="https://github.com/BamaCharanChhandogi/Quora-Clone"
               demoLink="https://quora-clone-eight.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={BenChi}
+              isBlog={false}
+              title="Bengali Chitkarian"
+              description="It's basically a site using React and Firebase. It's my 4th sem project,
+              I have learned a lot concepts about React."
+              ghLink="https://github.com/BamaCharanChhandogi/Bengali-Chitkarian"
+              demoLink="https://chitkara-bengali.vercel.app/"
             />
           </Col>
 

@@ -23,6 +23,7 @@ import useraectgfg from "../../Assets/Projects/usereactGFG.png";
 import usereactsummary from "../../Assets/Projects/usereactsummary.png";
 import reactGFG from "../../Assets/Projects/reactGFG.png";
 import DiabetesPred from "../../Assets/Projects/Diabetes.png";
+import MonGoPostman from "../../Assets/Projects/MongoPostman.png";
 
 function Projects() {
   const webProjects = [
@@ -133,6 +134,13 @@ function Projects() {
   ];
   
   const vsCodeExtensions = [
+    {
+      imgPath: MonGoPostman,
+      title: "MongoTest: Schema to Postman",
+      description: "Convert Mongoose schemas to Postman-ready JSON data for easy API testing. Streamline your MongoDB and Postman workflow.",
+      ghLink: "https://github.com/BamaCharanChhandogi/mongoose-to-postman",
+      demoLink: "https://marketplace.visualstudio.com/items?itemName=BamaCharanChhandogi.mongotest-schema-to-postman"
+    },
     {
       imgPath: vsCodeTheme,
       title: "ChromaBlend - VS Code Theme",

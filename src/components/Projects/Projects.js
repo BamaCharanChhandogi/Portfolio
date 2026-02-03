@@ -24,9 +24,26 @@ import usereactsummary from "../../Assets/Projects/usereactsummary.png";
 import reactGFG from "../../Assets/Projects/reactGFG.png";
 import DiabetesPred from "../../Assets/Projects/Diabetes.png";
 import MonGoPostman from "../../Assets/Projects/MongoPostman.png";
+import BlogCaster from "../../Assets/Projects/Blogcaster.png";
+import MoneyMentor from "../../Assets/Projects/MoneyMentor.png";
+import SchemaCraft from "../../Assets/Projects/SchemaCraft.png";
 
 function Projects() {
   const webProjects = [
+    {
+      imgPath: BlogCaster,
+      title: "BlogCaster - AI-Powered Blogging Platform",
+      description: "Cloud-hosted MCP server that lets you publish, list, and delete posts across multiple blogging platforms from any MCP-enabled client (Claude Desktop, Cursor/Cline, etc.). No local installs — just point your client at the URL.",
+      ghLink: "https://github.com/BamaCharanChhandogi/BlogCaster-MCP",
+      demoLink: "https://blogcaster-mcp.rrpb2580.workers.dev/"
+    },
+    {
+      imgPath: MoneyMentor,
+      title: "Money Mentor",
+      description: "Money-Mentor is a premium personal finance management ecosystem that empowers users to take full control of their financial journeys through real-time data, collaborative tools, and AI-driven insights.",
+      ghLink: "https://github.com/BamaCharanChhandogi/Money-Mentor",
+      demoLink: "https://money-mentor-wheat.vercel.app/"
+    },
     {
       imgPath: github,
       title: "Git-Finder",
@@ -42,6 +59,13 @@ function Projects() {
       demoLink: "https://quora-clone-eight.vercel.app/"
     },
     {
+      imgPath: ReadMeEasy,
+      title: "READMEasy: AI-Powered README Generator",
+      description: "READMEasy is a user-friendly web platform that empowers you to generate comprehensive and engaging README files for your software projects. Powered by advanced AI models, ReadMeister effortlessly tailors your README content based on your project's unique details",
+      ghLink: "https://github.com/BamaCharanChhandogi/READMEasy",
+      demoLink: "https://readm-easy.vercel.app/"
+    },
+    {
       imgPath: Product,
       title: "Product Landing Page",
       description: "A simple E-commerce site using HTML, CSS, and JavaScript. My first-year project.",
@@ -54,13 +78,6 @@ function Projects() {
       description: "Welcome to Bengali-Chitkarian, your go-to platform for connecting with fellow Bengali students at Chitkara University, Punjab. We are delighted to have you here and look forward to fostering a vibrant Bengali community at Chitkara.",
       ghLink: "https://github.com/BamaCharanChhandogi/Bengali-Chitkarian",
       demoLink: "https://chitkara-bengali.vercel.app/"
-    },
-    {
-      imgPath: ReadMeEasy,
-      title: "READMEasy: AI-Powered README Generator",
-      description: "READMEasy is a user-friendly web platform that empowers you to generate comprehensive and engaging README files for your software projects. Powered by advanced AI models, ReadMeister effortlessly tailors your README content based on your project's unique details",
-      ghLink: "https://github.com/BamaCharanChhandogi/READMEasy",
-      demoLink: "https://readm-easy.vercel.app/"
     },
 
   ];
@@ -134,12 +151,12 @@ function Projects() {
   ];
   
   const vsCodeExtensions = [
-    {
-      imgPath: MonGoPostman,
-      title: "MongoTest: Schema to Postman",
-      description: "Convert Mongoose schemas to Postman-ready JSON data for easy API testing. Streamline your MongoDB and Postman workflow.",
-      ghLink: "https://github.com/BamaCharanChhandogi/mongoose-to-postman",
-      demoLink: "https://marketplace.visualstudio.com/items?itemName=BamaCharanChhandogi.mongotest-schema-to-postman"
+     {
+      imgPath: SchemaCraft,
+      title: "SchemaCraft",
+      description: "The 'Multi-Schema to JSON Converter' Visual Studio Code extension streamlines your API development workflow by effortlessly converting schemas from multiple popular libraries into ready-to-use JSON sample data.",
+      ghLink: "https://marketplace.visualstudio.com/items?itemName=BamaCharanChhandogi.mongotest-schema-to-postman&ssr=false#review-details",
+      demoLink: "https://www.npmjs.com/package/use-react-summary",
     },
     {
       imgPath: vsCodeTheme,
@@ -171,22 +188,22 @@ function Projects() {
       title: "React-GFG",
       description: "Collection of components for showcasing your Geek for Geeks profile in your portfolio ✨. Built with React and CSS.",
       ghLink: "https://github.com/BamaCharanChhandogi/react-gfg",
-      demoLink: "https://www.npmjs.com/package/react-gfg",
+      demoLink: "https://profile-geek-kappa.vercel.app/",
     },
-    {
-      imgPath: useraectgfg,
-      title: "Use React GFG",
-      description: "A tiny fully customizable react hook which gives you full profile details of Geeks for Geeks coder.",
-      ghLink: "https://github.com/BamaCharanChhandogi/use-react-gfg",
-      demoLink: "https://www.npmjs.com/package/use-react-gfg",
-    },
-    {
-      imgPath: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1AdkMFKWK8Vj12QiSMx-_VwN_8IM5PczNlw&s",
-      title: "Schema Versioner",
-      description: "Schema Versioner is a powerful package for Node.js applications that automates database schema versioning, migrations, and backwards compatibility for MongoDB. It simplifies the maintenance of evolving schemas and ensures seamless compatibility between different versions of your application.",
-      ghLink: "https://github.com/BamaCharanChhandogi/schema-versioner",
-      demoLink: "https://www.npmjs.com/package/schema-versioner",
-    },
+    // {
+    //   imgPath: useraectgfg,
+    //   title: "Use React GFG",
+    //   description: "A tiny fully customizable react hook which gives you full profile details of Geeks for Geeks coder.",
+    //   ghLink: "https://github.com/BamaCharanChhandogi/use-react-gfg",
+    //   demoLink: "https://www.npmjs.com/package/use-react-gfg",
+    // },
+    // {
+    //   imgPath: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1AdkMFKWK8Vj12QiSMx-_VwN_8IM5PczNlw&s",
+    //   title: "Schema Versioner",
+    //   description: "Schema Versioner is a powerful package for Node.js applications that automates database schema versioning, migrations, and backwards compatibility for MongoDB. It simplifies the maintenance of evolving schemas and ensures seamless compatibility between different versions of your application.",
+    //   ghLink: "https://github.com/BamaCharanChhandogi/schema-versioner",
+    //   demoLink: "https://www.npmjs.com/package/schema-versioner",
+    // },
   ];
   const MLproject=[
     {

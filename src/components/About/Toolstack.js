@@ -2,9 +2,12 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {
   SiVisualstudiocode,
+  // eslint-disable-next-line no-unused-vars
   SiPostman,
+  // eslint-disable-next-line no-unused-vars
   SiSlack,
   SiVercel,
+  // eslint-disable-next-line no-unused-vars
   SiMacos,
   SiWindows,
 } from "react-icons/si";

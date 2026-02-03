@@ -11,12 +11,16 @@ import {
   DiJava,
 } from "react-icons/di";
 import {
+  // eslint-disable-next-line no-unused-vars
   SiRedis,
   SiFirebase,
+  // eslint-disable-next-line no-unused-vars
   SiNextdotjs,
+  // eslint-disable-next-line no-unused-vars
   SiSolidity,
   SiPostgresql,
 } from "react-icons/si";
+// eslint-disable-next-line no-unused-vars
 import { TbBrandGolang } from "react-icons/tb";
 
 function Techstack() {

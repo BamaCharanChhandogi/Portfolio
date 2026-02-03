@@ -1,9 +1,13 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { Container, Row, Col } from "react-bootstrap";
+// eslint-disable-next-line no-unused-vars
 import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
+// eslint-disable-next-line no-unused-vars
 import Aboutcard from "./AboutCard";
+// eslint-disable-next-line no-unused-vars
 import myimg from "../../Assets/IMG_20220705_183813.jpg";
 import Toolstack from "./Toolstack";
 import Education from "./Education";

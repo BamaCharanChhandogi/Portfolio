@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+// eslint-disable-next-line no-unused-vars
 import myImg from "../../Assets/avatar.svg";
+// eslint-disable-next-line no-unused-vars
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,

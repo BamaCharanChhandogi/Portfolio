@@ -19,10 +19,12 @@ import vsCodeTheme from "../../Assets/Projects/VSCodeTheme.png";
 import JavaSnippet from "../../Assets/Projects/JavaSnippet.png";
 import ReadMeEasy from "../../Assets/Projects/ReadmeG.png";
 import GeminiBot from "../../Assets/Projects/GeminiBoT.png";
+// eslint-disable-next-line no-unused-vars
 import useraectgfg from "../../Assets/Projects/usereactGFG.png";
 import usereactsummary from "../../Assets/Projects/usereactsummary.png";
 import reactGFG from "../../Assets/Projects/reactGFG.png";
 import DiabetesPred from "../../Assets/Projects/Diabetes.png";
+// eslint-disable-next-line no-unused-vars
 import MonGoPostman from "../../Assets/Projects/MongoPostman.png";
 import BlogCaster from "../../Assets/Projects/Blogcaster.png";
 import MoneyMentor from "../../Assets/Projects/MoneyMentor.png";

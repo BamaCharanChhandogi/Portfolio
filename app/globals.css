@@ -246,6 +246,14 @@ button:focus-visible {
   right: 0;
 }
 
+.nav-links a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.nav-links a[aria-current="page"]::after {
+  right: 0;
+}
+
 .nav-links a:hover,
 .seeall:hover,
 .text-link:hover,
@@ -1644,6 +1652,11 @@ button:focus-visible {
 
   .mobile-nav-panel .mobile-menu-socials a::after {
     content: none;
+  }
+
+  .mobile-nav-panel > a[aria-current="page"] {
+    color: var(--ink);
+    border-bottom-color: var(--accent);
   }
 
   .footer-grid {

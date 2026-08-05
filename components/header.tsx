@@ -10,6 +10,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   useEffect(() => {
     if (!open) {
@@ -62,7 +63,7 @@ export function Header() {
           </Link>
           <div className="nav-links">
             {navigation.map((item) => (
-              <Link key={item.href} href={item.href}>
+              <Link key={item.href} href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>
                 {item.label}
               </Link>
             ))}
@@ -84,7 +85,12 @@ export function Header() {
       {open ? (
         <div className="mobile-nav-panel" aria-label="Mobile navigation">
           {navigation.map((item) => (
-            <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
+            <Link
+              key={item.href}
+              href={item.href}
+              aria-current={isActive(item.href) ? "page" : undefined}
+              onClick={() => setOpen(false)}
+            >
               {item.label}
             </Link>
           ))}

@@ -14,7 +14,13 @@ const jsonLd = {
   name: siteConfig.name,
   url: siteConfig.url,
   jobTitle: "Full Stack Engineer",
-  sameAs: [siteConfig.socials.github, siteConfig.socials.linkedin, siteConfig.socials.twitter],
+  sameAs: [
+    siteConfig.socials.github,
+    siteConfig.socials.linkedin,
+    siteConfig.socials.twitter,
+    siteConfig.socials.instagram,
+    siteConfig.socials.blog,
+  ],
   knowsAbout: ["React", "TypeScript", "Node.js", "Cloudflare Workers", "AWS", "Shopify APIs", "Open Source"],
 };
 

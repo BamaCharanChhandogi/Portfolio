@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Bama Charan Chhandogi",
-  domain: "bamacharan.me",
-  url: "https://bamacharan.me",
+  domain: "bamacharan.com",
+  url: "https://bamacharan.com",
   title: "Bama Charan Chhandogi - Full Stack Developer",
   description:
     "Full Stack Developer focused on cloud integrations, AI video workflows, developer tools, and open-source systems.",

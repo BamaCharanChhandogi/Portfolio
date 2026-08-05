@@ -10,6 +10,22 @@ featured: true
 year: "2026"
 ---
 
-BlogCaster is a cloud-hosted MCP server that enables publish, list, and delete operations across Hashnode, Dev.to, and WordPress.
+## Problem
 
-It uses Cloudflare Workers for the hosted runtime and Durable Objects for per-user token isolation, giving users zero-install remote access from MCP-enabled clients.
+Writing with AI tools creates a publishing gap: the draft can be produced inside Claude Desktop, Cursor, or Cline, but publishing still means opening each platform, copying Markdown, managing tokens, and repeating the same steps across Hashnode, Dev.to, and WordPress.
+
+## What I Built
+
+BlogCaster is an MCP server that lets an AI client publish, list, and delete posts across multiple blogging platforms. It supports both a hosted Cloudflare Worker endpoint and an NPM package for local stdio transport.
+
+The tool exposes a small set of actions: generate a secure token-management link, publish Markdown content, fetch recent blog posts, and delete posts by platform ID.
+
+## Technical Decisions
+
+The hosted runtime runs on Cloudflare Workers so users can connect without installing a backend. Durable Objects isolate token state per session, which keeps platform credentials scoped and avoids mixing users across MCP sessions.
+
+I treated security and setup friction as the main product constraints. Sessions are intentionally ephemeral, token management happens through a dedicated link, and the MCP surface area stays narrow enough for AI clients to call reliably.
+
+## Outcome
+
+The project turns a multi-platform publishing workflow into a single AI-tool command path. It supports Hashnode, Dev.to, and WordPress today, with Medium left as a planned platform.

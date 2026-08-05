@@ -9,6 +9,18 @@ demo: "https://www.npmjs.com/package/use-react-summary"
 year: "2023"
 ---
 
-Use React Summary packages a text-summarization workflow into a small reusable utility for React applications.
+## Problem
 
-It was built as part of a pair of NPM packages that reached 300+ monthly downloads, with a focus on keeping API integration simple for frontend developers.
+Many React apps need a quick way to summarize long text, but wiring an AI SDK, loading state, error handling, and Markdown output repeatedly creates unnecessary setup work.
+
+## What I Built
+
+Use React Summary is an NPM package that exposes a `useSummary` hook for AI-powered text summarization. Developers pass text and an optional word count, then receive summarized Markdown output plus loading and error states.
+
+## Technical Decisions
+
+The package uses Google Generative AI and returns a React-friendly API. It keeps the hook small, handles common failure states, and outputs Markdown so summaries can be rendered cleanly in content-heavy interfaces.
+
+## Outcome
+
+It was built as part of a pair of NPM packages that reached 300+ monthly downloads, with a focus on making AI integration easier for frontend developers.

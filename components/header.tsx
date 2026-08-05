@@ -104,6 +104,9 @@ export function Header() {
             <a href={siteConfig.socials.twitter} target="_blank" rel="noreferrer">
               X
             </a>
+            <a href={siteConfig.socials.instagram} target="_blank" rel="noreferrer">
+              Instagram
+            </a>
           </div>
         </div>
       ) : null}

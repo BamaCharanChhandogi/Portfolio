@@ -843,6 +843,11 @@ button:focus-visible {
   line-height: 1;
 }
 
+.project-main .prose h2 {
+  border-top: 1px solid var(--line);
+  padding-top: 26px;
+}
+
 .article-image {
   position: relative;
   aspect-ratio: 16 / 9;

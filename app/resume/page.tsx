@@ -75,14 +75,14 @@ export default function ResumePage() {
             <h1>Full Stack Developer · Cloud & Open Source.</h1>
             <p>Structured web resume with a downloadable PDF for sharing.</p>
             <div className="resume-contact" aria-label="Resume contact links">
-              <a href={siteConfig.url} target="_blank" rel="noreferrer">
-                {siteConfig.domain}
-              </a>
               <a href={siteConfig.socials.github} target="_blank" rel="noreferrer">
                 GitHub
               </a>
               <a href={siteConfig.socials.linkedin} target="_blank" rel="noreferrer">
                 LinkedIn
+              </a>
+              <a href={siteConfig.socials.instagram} target="_blank" rel="noreferrer">
+                Instagram
               </a>
               <a href={siteConfig.socials.email}>
                 {siteConfig.email}

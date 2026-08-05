@@ -10,6 +10,18 @@ featured: false
 year: "2023"
 ---
 
-This extension turns a repeated backend task into an editor workflow: select a Mongoose schema, generate realistic request data, and move faster from model design to Postman testing.
+## Problem
 
-It is part of a group of VS Code extensions that crossed 3,000+ combined downloads and focused on small, practical improvements to everyday development work.
+Backend developers often need realistic Postman request bodies while testing Mongoose models. Manually translating schema fields into sample JSON is repetitive and easy to get wrong.
+
+## What I Built
+
+Mongoose to Postman Converter is a VS Code extension that converts Mongoose schemas into Postman-ready request bodies. It turns schema structure into usable test data directly inside the editor.
+
+## Technical Decisions
+
+The extension keeps the workflow close to the source code: select or work from a schema, generate realistic request data, and move straight into API testing. Google Generative AI supports smarter sample generation where plain static mapping would be too limited.
+
+## Outcome
+
+It is part of my VS Code extension set that crossed 3,000+ combined downloads, focused on removing small repeated tasks from everyday backend development.

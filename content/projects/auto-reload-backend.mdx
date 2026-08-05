@@ -7,6 +7,18 @@ image: "/projects/codeEditor.png"
 year: "2023"
 ---
 
-Auto Reload Backend is a small developer-tooling extension built for faster local backend iteration. It focuses on reducing the manual stop-start cycle while working on Node.js services.
+## Problem
 
-The project sits alongside Java Easy Snippet and Mongoose to Postman Converter as part of a VS Code extension set that reached 3,000+ combined downloads.
+While building Node.js backends, the repeated edit, stop server, restart server loop slows down local development. It is especially annoying during small controller, route, or middleware changes.
+
+## What I Built
+
+Auto Reload Backend is a VS Code extension focused on faster local backend iteration. It reduces the manual restart cycle so developers can keep their attention on the code they are changing.
+
+## Technical Decisions
+
+I kept the tool inside the editor because that is where the workflow happens. The extension is small by design: it solves one developer-experience problem instead of becoming a full process manager.
+
+## Outcome
+
+The project sits alongside Java Easy Snippet and Mongoose to Postman Converter as part of a VS Code extension set that crossed 3,000+ combined downloads.

@@ -74,6 +74,7 @@ const elsewhere = [
   ["GitHub", siteConfig.socials.github],
   ["LinkedIn", siteConfig.socials.linkedin],
   ["X", siteConfig.socials.twitter],
+  ["Instagram", siteConfig.socials.instagram],
   ["Hashnode", siteConfig.socials.blog],
 ];
 

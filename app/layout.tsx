@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${display.variable} ${sans.variable} ${mono.variable}`} suppressHydrationWarning>
-      <body>
+      <body suppressHydrationWarning>
         <script
           dangerouslySetInnerHTML={{
             __html:

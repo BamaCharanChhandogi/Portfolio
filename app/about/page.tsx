@@ -92,7 +92,6 @@ export default function AboutPage() {
                 alt="Bama Charan Chhandogi"
                 fill
                 sizes="(max-width: 860px) 100vw, 360px"
-                priority
               />
             </div>
             <div className="bio-copy">

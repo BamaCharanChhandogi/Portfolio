@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BlogFeedRow } from "@/components/blog-feed-row";
 import { FilterBar } from "@/components/filter-bar";
-import { PostRow } from "@/components/post-row";
 import { filterPosts, getBlogTags } from "@/lib/categories";
 import { getBlogEntries } from "@/lib/content";
 
@@ -20,14 +20,20 @@ export const metadata: Metadata = {
 export const revalidate = 3600;
 
 type BlogPageProps = {
-  searchParams: Promise<{ tag?: string }>;
+  searchParams: Promise<{ page?: string; tag?: string }>;
 };
 
+const postsPerPage = 8;
+
 export default async function BlogPage({ searchParams }: BlogPageProps) {
-  const { tag } = await searchParams;
+  const { page, tag } = await searchParams;
   const posts = await getBlogEntries();
   const filteredPosts = filterPosts(posts, tag);
   const tags = getBlogTags(posts);
+  const currentPage = Math.max(1, Number(page) || 1);
+  const visibleCount = currentPage * postsPerPage;
+  const visiblePosts = filteredPosts.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredPosts.length;
 
   return (
     <section className="page-section">
@@ -60,12 +66,32 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           </Link>
         )}
 
-        <div className="post-list">
-          {filteredPosts.map((post, index) => (
-            <PostRow key={post.slug} post={post} showTag featured={index === 0} />
+        <div className="post-list blog-feed-list">
+          {visiblePosts.map((post, index) => (
+            <BlogFeedRow key={post.slug} post={post} featured={index === 0} />
           ))}
         </div>
+
+        {hasMore ? (
+          <div className="feed-more">
+            <Link className="load-more" href={blogPageHref(tag, currentPage + 1)}>
+              Load more <span aria-hidden="true">↓</span>
+            </Link>
+          </div>
+        ) : null}
       </div>
     </section>
   );
+}
+
+function blogPageHref(tag: string | undefined, page: number) {
+  const params = new URLSearchParams();
+
+  if (tag) {
+    params.set("tag", tag);
+  }
+
+  params.set("page", String(page));
+
+  return `/blog?${params.toString()}`;
 }

@@ -8,9 +8,13 @@ type BlogFeedRowProps = {
 
 export function BlogFeedRow({ post, featured }: BlogFeedRowProps) {
   const primaryTag = post.tags?.[0];
+  const hasMedia = Boolean(post.image);
 
   return (
-    <Link className={`blog-feed-row ${featured ? "featured" : ""}`} href={`/blog/${post.slug}`}>
+    <Link
+      className={`blog-feed-row ${featured ? "featured" : ""} ${hasMedia ? "has-media" : "no-media"}`}
+      href={`/blog/${post.slug}`}
+    >
       <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
 
       <span className="blog-feed-copy">
@@ -23,7 +27,7 @@ export function BlogFeedRow({ post, featured }: BlogFeedRowProps) {
         {post.description ? <em>{post.description}</em> : null}
       </span>
 
-      {post.image ? (
+      {hasMedia ? (
         <span className="blog-feed-media" aria-hidden="true">
           <img src={post.image} alt="" loading="lazy" decoding="async" />
         </span>

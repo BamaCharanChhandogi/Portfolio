@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BlogFeedRow } from "@/components/blog-feed-row";
 import { FilterBar } from "@/components/filter-bar";
-import { PostRow } from "@/components/post-row";
 import { filterPosts, getBlogTags } from "@/lib/categories";
 import { getBlogEntries } from "@/lib/content";
 
@@ -60,9 +60,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           </Link>
         )}
 
-        <div className="post-list">
+        <div className="post-list blog-feed-list">
           {filteredPosts.map((post, index) => (
-            <PostRow key={post.slug} post={post} showTag featured={index === 0} />
+            <BlogFeedRow key={post.slug} post={post} featured={index === 0} />
           ))}
         </div>
       </div>

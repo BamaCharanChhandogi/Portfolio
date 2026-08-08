@@ -69,10 +69,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <article className="article-shell">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="wrap">
-        <Link className="text-link back-link" href="/projects">
-          <ArrowLeft size={16} /> Back to projects
-        </Link>
         <div className="project-case">
+          <Link className="text-link back-link project-back-link" href="/projects">
+            <ArrowLeft size={16} /> Back to projects
+          </Link>
+
+          <header className="article-header project-header">
+            <h1>{project.title}</h1>
+            <p className="article-lede">{project.description}</p>
+          </header>
+
           <aside className="project-sidebar">
             <p className="label">
               {project.year} · {categoryLabel}
@@ -99,11 +105,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </aside>
 
           <div className="project-main">
-            <header className="article-header project-header">
-              <h1>{project.title}</h1>
-              <p className="article-lede">{project.description}</p>
-            </header>
-
             {project.image ? (
               <BrowserFrame image={project.image} url={project.demo ?? `${siteConfig.domain}/projects/${project.slug}`} priority />
             ) : null}

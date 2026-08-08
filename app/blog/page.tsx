@@ -74,7 +74,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
         {hasMore ? (
           <div className="feed-more">
-            <Link className="load-more" href={blogPageHref(tag, currentPage + 1)}>
+            <Link className="load-more" href={blogPageHref(tag, currentPage + 1)} scroll={false}>
               Load more <span aria-hidden="true">↓</span>
             </Link>
           </div>

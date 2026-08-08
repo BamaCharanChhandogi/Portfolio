@@ -158,93 +158,98 @@ async function getHashnodePosts(): Promise<ContentEntry[]> {
     return getHashnodeRssPosts();
   }
 
-  const posts: ContentEntry[] = [];
-  let after: string | null = null;
-  let hasNextPage = true;
+  try {
+    const posts: ContentEntry[] = [];
+    let after: string | null = null;
+    let hasNextPage = true;
 
-  while (hasNextPage) {
-    const response = await fetch(hashnodeEndpoint, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify({
-        query: `
-          query PublicationPosts($host: String!, $first: Int!, $after: String) {
-            publication(host: $host) {
-              posts(first: $first, after: $after) {
-                edges {
-                  node {
-                    id
-                    slug
-                    title
-                    brief
-                    url
-                    publishedAt
-                    updatedAt
-                    readTimeInMinutes
-                    tags {
-                      name
+    while (hasNextPage) {
+      const response = await fetch(hashnodeEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify({
+          query: `
+            query PublicationPosts($host: String!, $first: Int!, $after: String) {
+              publication(host: $host) {
+                posts(first: $first, after: $after) {
+                  edges {
+                    node {
+                      id
                       slug
-                    }
-                    coverImage {
+                      title
+                      brief
                       url
-                    }
-                    content {
-                      markdown
+                      publishedAt
+                      updatedAt
+                      readTimeInMinutes
+                      tags {
+                        name
+                        slug
+                      }
+                      coverImage {
+                        url
+                      }
+                      content {
+                        markdown
+                      }
                     }
                   }
-                }
-                pageInfo {
-                  hasNextPage
-                  endCursor
+                  pageInfo {
+                    hasNextPage
+                    endCursor
+                  }
                 }
               }
             }
-          }
-        `,
-        variables: {
-          host: hashnodePublicationHost,
-          first: 20,
-          after,
-        },
-      }),
-      next: { revalidate: 3600 },
-    });
+          `,
+          variables: {
+            host: hashnodePublicationHost,
+            first: 20,
+            after,
+          },
+        }),
+        next: { revalidate: 3600 },
+      });
 
-    if (!response.ok) {
-      console.warn(`Hashnode API returned ${response.status}`);
-      return getHashnodeRssPosts();
+      if (!response.ok) {
+        console.warn(`Hashnode API returned ${response.status}`);
+        return getHashnodeRssPosts();
+      }
+
+      const contentType = response.headers.get("content-type") ?? "";
+
+      if (!contentType.includes("application/json")) {
+        return getHashnodeRssPosts();
+      }
+
+      const payload = (await response.json()) as HashnodePostsResponse;
+
+      if (payload.errors?.length) {
+        console.warn(`Hashnode API error: ${payload.errors.map((error) => error.message).join("; ")}`);
+        return getHashnodeRssPosts();
+      }
+
+      const connection = payload.data?.publication?.posts;
+      const edges = connection?.edges ?? [];
+
+      posts.push(...edges.map(hashnodePostToEntry));
+
+      hasNextPage = Boolean(connection?.pageInfo?.hasNextPage);
+      after = connection?.pageInfo?.endCursor ?? null;
+
+      if (!after) {
+        hasNextPage = false;
+      }
     }
 
-    const contentType = response.headers.get("content-type") ?? "";
-
-    if (!contentType.includes("application/json")) {
-      return getHashnodeRssPosts();
-    }
-
-    const payload = (await response.json()) as HashnodePostsResponse;
-
-    if (payload.errors?.length) {
-      console.warn(`Hashnode API error: ${payload.errors.map((error) => error.message).join("; ")}`);
-      return getHashnodeRssPosts();
-    }
-
-    const connection = payload.data?.publication?.posts;
-    const edges = connection?.edges ?? [];
-
-    posts.push(...edges.map(hashnodePostToEntry));
-
-    hasNextPage = Boolean(connection?.pageInfo?.hasNextPage);
-    after = connection?.pageInfo?.endCursor ?? null;
-
-    if (!after) {
-      hasNextPage = false;
-    }
+    return posts;
+  } catch (error) {
+    console.warn("Hashnode API fetch failed", error);
+    return getHashnodeRssPosts();
   }
-
-  return posts;
 }
 
 function hashnodePostToEntry({ node }: { node: HashnodePostNode }): ContentEntry {

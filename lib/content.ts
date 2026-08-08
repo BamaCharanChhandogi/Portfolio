@@ -88,14 +88,23 @@ export function getFeaturedProjects() {
   return getEntries("projects").filter((project) => project.featured);
 }
 
+const hiddenBlogSlugs = new Set([
+  "frontend-architecture",
+  "getting-started-with-modern-web-development",
+  "getting-started-with-modern-web-development-1",
+  "getting-started-with-web-development",
+]);
+
 export async function getBlogEntries() {
   const remotePosts = await getHashnodePosts();
 
-  return remotePosts.sort((a, b) => {
-    const aDate = a.publishedAt ?? "";
-    const bDate = b.publishedAt ?? "";
-    return bDate.localeCompare(aDate);
-  });
+  return remotePosts
+    .filter((post) => !hiddenBlogSlugs.has(post.slug))
+    .sort((a, b) => {
+      const aDate = a.publishedAt ?? "";
+      const bDate = b.publishedAt ?? "";
+      return bDate.localeCompare(aDate);
+    });
 }
 
 export async function getBlogEntry(slug: string) {

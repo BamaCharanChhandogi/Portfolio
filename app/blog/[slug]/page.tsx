@@ -70,22 +70,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <article className="article-shell">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="wrap">
-        <Link className="text-link back-link" href="/blog">
-          <ArrowLeft size={16} /> All writing
-        </Link>
-        <header className="article-header">
-          <p className="label">
-            {formatDate(post.publishedAt)} · {post.readingTime}
-          </p>
-          <h1>{post.title}</h1>
-          <p className="article-lede">{post.description}</p>
-        </header>
+        <div className="article-intro-grid">
+          <Link className="text-link back-link" href="/blog">
+            <ArrowLeft size={16} /> All writing
+          </Link>
+          <header className="article-header">
+            <p className="label">
+              {formatDate(post.publishedAt)} · {post.readingTime}
+            </p>
+            <h1>{post.title}</h1>
+            <p className="article-lede">{post.description}</p>
+          </header>
 
-        {post.image ? (
-          <div className="article-image">
-            <Image src={post.image} alt="" fill sizes="(max-width: 980px) 100vw, 980px" priority />
-          </div>
-        ) : null}
+          {post.image ? (
+            <div className="article-image">
+              <Image src={post.image} alt="" fill sizes="(max-width: 1080px) 100vw, 1008px" priority />
+            </div>
+          ) : null}
+        </div>
 
         <div className="article-grid">
           <div className="article-content">

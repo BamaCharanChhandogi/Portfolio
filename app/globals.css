@@ -1880,10 +1880,11 @@ button:focus-visible {
   }
 
   .blog-feed-row {
-    grid-template-columns: minmax(0, 1fr) minmax(160px, 240px);
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
+  .blog-feed-row.has-media,
   .blog-feed-row.no-media {
     grid-template-columns: 1fr;
   }
@@ -2063,6 +2064,7 @@ button:focus-visible {
 
   .blog-feed-media {
     order: 2;
+    width: 100%;
     border-radius: 10px;
   }
 

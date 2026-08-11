@@ -1568,9 +1568,18 @@ button:focus-visible {
   color: var(--ink-2);
 }
 
+.journey-collage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  min-height: 260px;
+}
+
 .journey-photo {
   position: relative;
-  aspect-ratio: 16 / 10;
+  min-height: 0;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1578,11 +1587,15 @@ button:focus-visible {
   box-shadow: var(--shadow);
 }
 
+.journey-photo:first-child {
+  grid-row: 1 / span 2;
+}
+
 .journey-photo img {
   object-fit: cover;
 }
 
-.journey-photo span {
+.journey-collage > span {
   position: absolute;
   right: 12px;
   bottom: 12px;
@@ -2069,10 +2082,14 @@ button:focus-visible {
     height: 48px;
   }
 
-  .journey-photo {
+  .journey-collage {
     grid-column: 2;
     width: 100%;
     max-width: 480px;
+    min-height: 280px;
+  }
+
+  .journey-photo {
     box-shadow: none;
   }
 
@@ -2255,13 +2272,25 @@ button:focus-visible {
   }
 
   .journey-marker,
-  .journey-photo {
+  .journey-collage {
     grid-column: auto;
   }
 
   .journey-marker {
     width: 44px;
     height: 44px;
+  }
+
+  .journey-collage {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1.25fr 0.85fr;
+    min-height: 360px;
+    max-width: none;
+  }
+
+  .journey-photo:first-child {
+    grid-column: 1 / -1;
+    grid-row: auto;
   }
 
   .resume-heading .btn {

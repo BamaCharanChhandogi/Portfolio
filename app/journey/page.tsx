@@ -17,8 +17,11 @@ const chapters = [
     title: "Early curiosity, computers, and small wins",
     description:
       "The foundation years: learning how technology works, building confidence with computers, and collecting the first proof that I wanted to build software seriously.",
-    image: "/images/profile.jpg",
-    imageAlt: "Bama Charan Chhandogi profile portrait",
+    images: [
+      { src: "/images/profile.jpg", alt: "Bama Charan Chhandogi profile portrait" },
+      { src: "/projects/codeEditor.png", alt: "Code editor project preview" },
+      { src: "/projects/Wordcounter.png", alt: "Word counter project preview" },
+    ],
     moments: ["Computer fundamentals", "Early web experiments", "Problem solving"],
   },
   {
@@ -27,8 +30,11 @@ const chapters = [
     title: "Computer science, projects, and public learning",
     description:
       "At Chitkara University I moved from learning syntax to shipping real projects, writing publicly, and using every assignment or side project as a reason to build something useful.",
-    image: "/projects/Diabetes.png",
-    imageAlt: "Diabetes prediction project interface",
+    images: [
+      { src: "/projects/Diabetes.png", alt: "Diabetes prediction project interface" },
+      { src: "/projects/reactGFG.png", alt: "React learning project preview" },
+      { src: "/projects/Food-Recipe.png", alt: "Food recipe app preview" },
+    ],
     moments: ["BE Computer Science", "ML and full-stack projects", "Technical writing"],
   },
   {
@@ -37,8 +43,11 @@ const chapters = [
     title: "Maintaining, reviewing, and learning with developers",
     description:
       "Open-source work made the portfolio more than personal projects: reviewing pull requests, mentoring contributors, and learning how real collaboration works at scale.",
-    image: "/projects/github.png",
-    imageAlt: "GitHub project preview",
+    images: [
+      { src: "/projects/github.png", alt: "GitHub project preview" },
+      { src: "/projects/ReadmeG.png", alt: "README generator project preview" },
+      { src: "/projects/MongoPostman.png", alt: "MongoPostman project preview" },
+    ],
     moments: ["The Algorithms", "GSSoC mentor", "Contributor reviews"],
   },
   {
@@ -47,8 +56,11 @@ const chapters = [
     title: "Production 3D work and serverless systems",
     description:
       "Worked on 3D configurators, image viewers, AWS Lambda APIs, and production frontend experiences where performance and user-facing details mattered every day.",
-    image: "/projects/Productlanding.png",
-    imageAlt: "Product landing project preview",
+    images: [
+      { src: "/projects/Productlanding.png", alt: "Product landing project preview" },
+      { src: "/projects/ecart.png", alt: "Ecommerce project preview" },
+      { src: "/projects/APIFinder.png", alt: "API finder project preview" },
+    ],
     moments: ["Three.js", "AWS Lambda", "Production UI"],
   },
   {
@@ -57,8 +69,11 @@ const chapters = [
     title: "Platform integrations and AI video workflows",
     description:
       "Currently building Shopify, GoHighLevel, and AI video workflow systems that connect product, infrastructure, authentication, webhooks, and developer tooling.",
-    image: "/projects/Blogcaster.png",
-    imageAlt: "Blog automation workflow preview",
+    images: [
+      { src: "/projects/Blogcaster.png", alt: "Blog automation workflow preview" },
+      { src: "/projects/SchemaCraft.png", alt: "SchemaCraft project preview" },
+      { src: "/projects/GeminiBoT.png", alt: "Gemini bot project preview" },
+    ],
     moments: ["Shopify apps", "OAuth and webhooks", "AI video tooling"],
   },
 ];
@@ -107,13 +122,21 @@ export default function JourneyPage() {
                   ))}
                 </div>
               </div>
-              <div className="journey-photo">
-                <Image
-                  src={chapter.image}
-                  alt={chapter.imageAlt}
-                  fill
-                  sizes="(max-width: 720px) 100vw, 360px"
-                />
+              <div className="journey-collage" aria-label={`${chapter.label} image archive`}>
+                {chapter.images.map((image, imageIndex) => (
+                  <div className="journey-photo" key={image.src}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      sizes={
+                        imageIndex === 0
+                          ? "(max-width: 720px) 100vw, 360px"
+                          : "(max-width: 720px) 50vw, 180px"
+                      }
+                    />
+                  </div>
+                ))}
                 <span>{chapter.label}</span>
               </div>
             </article>

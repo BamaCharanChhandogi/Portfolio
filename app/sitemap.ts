@@ -3,7 +3,7 @@ import { getBlogEntries, getEntries } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const staticRoutes = ["", "/about", "/projects", "/blog", "/resume"].map((route) => ({
+  const staticRoutes = ["", "/about", "/projects", "/blog", "/journey", "/resume"].map((route) => ({
     url: `${siteConfig.url}${route}`,
     lastModified: new Date(),
   }));

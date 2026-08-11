@@ -21,5 +21,6 @@ export const navigation = [
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/blog", label: "Blog" },
+  { href: "/journey", label: "Journey" },
   { href: "/resume", label: "Resume" },
 ];

@@ -1,26 +1,28 @@
 ---
 title: "Weather Site"
-description: "A weather application built with HTML, CSS, JavaScript, and a weather API."
+description: "A fast, no-framework weather app that uses browser geolocation to show current forecasts and temperature with zero bundle bloat."
 category: "Simple Projects"
-stack: ["HTML", "CSS", "JavaScript", "API"]
+stack: ["JavaScript", "OpenWeather API", "HTML5", "CSS3"]
 image: "/projects/Weather.png"
 repo: "https://github.com/BamaCharanChhandogi/Weather-App"
 demo: "https://bamacharanchhandogi.github.io/Weather-App/"
 year: "2022"
 ---
 
-## Problem
+## The Problem
 
-Weather apps are a useful API exercise because users expect fast lookup, readable conditions, and clear handling when data is unavailable.
+Checking the weather should be instant, but a lot of online weather tools take seconds to load heavy ad trackers and slow framework scripts before you even see the temperature outside.
 
-## What I Built
+## How It Solves It
 
-Weather Site is a compact weather application built with HTML, CSS, JavaScript, and a weather API. It fetches weather data and presents it in a simple user interface.
+Weather Site was built using pure vanilla JavaScript with zero frameworks. It asks for your location permission, looks up current coordinates, and immediately displays your local temperature, humidity, wind speed, and weather condition without any lag. You can also search for any city in the world.
 
-## Technical Decisions
+## How It's Built
 
-I kept the app browser-native to practice request handling, dynamic rendering, and basic API error states without framework overhead.
+- **Vanilla JavaScript (Fetch API)**: Direct API calls to OpenWeather with zero external packages.
+- **Geolocation API**: Auto-detects local coordinates so you don't even have to type your city.
+- **Dynamic CSS Styling**: Background and iconography adjust smoothly to match whether it's sunny, rainy, or overcast.
 
-## Outcome
+## What It Means
 
-The project helped build confidence with external APIs and user-facing data display patterns.
+A super lightweight utility that loads in milliseconds, proving that you don't always need heavy frameworks for fast, useful tools.

@@ -1,26 +1,28 @@
 ---
-title: "Shopping Page with React"
-description: "A shopping interface built with React, Context API, and routing."
+title: "e-Cart - React Shopping App"
+description: "A clean React shopping page built to practice global cart state using Context API and LocalStorage without relying on external libraries."
 category: "Simple Projects"
-stack: ["React", "Context API", "Routing"]
+stack: ["React.js", "Context API", "React Router", "LocalStorage"]
 image: "/projects/ecart.png"
 repo: "https://github.com/BamaCharanChhandogi/e-cart"
 demo: "https://e-cart-alpha.vercel.app/"
 year: "2023"
 ---
 
-## Problem
+## The Problem
 
-Shopping interfaces require shared state across product listings, cart views, and navigation. That makes them a useful way to practice React application structure.
+In e-commerce apps, you need your shopping cart data everywhere: on product cards, inside the navbar counter, on the checkout page, and saved when someone refreshes the tab. Passing that cart data up and down through 10 different components ("prop drilling") gets messy very fast.
 
-## What I Built
+## How It Solves It
 
-This project is a React shopping page with product browsing and cart-style interactions. It focuses on the core e-commerce UI loop: view products, manage selections, and move between pages.
+e-Cart solves this by managing the cart globally with React Context and a custom reducer. When you add or remove products, every component on the page updates cleanly, and your items stay in your cart even if you close or refresh the browser.
 
-## Technical Decisions
+## How It's Built
 
-I used React routing and Context API patterns to keep cart state available across the interface without passing props through every component.
+- **React Context & useReducer**: Centralizes actions like `ADD_TO_CART`, `REMOVE_ITEM`, and `UPDATE_QUANTITY`.
+- **LocalStorage Sync**: Saves cart items automatically so nothing is lost on page reload.
+- **React Router**: Clean URL routes for browsing products and viewing the cart.
 
-## Outcome
+## What It Means
 
-The project strengthened my understanding of shared state, route-level UI structure, and reusable front-end components.
+A focused project that proved the fundamentals of global state management in React without needing heavy external libraries.

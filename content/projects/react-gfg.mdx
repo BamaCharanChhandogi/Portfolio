@@ -1,26 +1,32 @@
 ---
-title: "use-react-GFG"
-description: "An NPM package for fetching and displaying complete GeeksforGeeks profile data inside React apps."
+title: "use-react-gfg - Coding Stats Hook"
+description: "GeeksforGeeks doesn't have an official profile API. This React hook fetches and formats your problem counts and coding stats so you can display them on your portfolio."
 category: "JavaScript NPM Packages"
-stack: ["JavaScript", "React", "Node.js", "API Integration"]
-image: "/projects/usereactGFG.png"
+stack: ["TypeScript", "React", "Node.js", "NPM Package", "Custom Hooks"]
+image: "/projects/reactGFG.png"
 repo: "https://github.com/BamaCharanChhandogi/use-react-gfg"
 demo: "https://www.npmjs.com/package/use-react-gfg"
 year: "2023"
 ---
 
-## Problem
+## The Problem
 
-Developers often want to show coding-profile stats in portfolios or dashboards, but fetching and normalizing profile data repeatedly is tedious.
+When engineering students build personal portfolios or resume websites, they often want to show their competitive programming progress—like how many questions they solved on GeeksforGeeks and their institute rank. But GeeksforGeeks doesn't have a public REST API for personal profiles, so students either had to hard-code their numbers or write their own complex scraping scripts.
 
-## What I Built
+## How the Package Solves It
 
-use-react-GFG is an NPM package that exposes a React hook for fetching complete GeeksforGeeks profile data. It helps developers show profile summaries, solved-problem stats, and related coding activity without rebuilding the same integration.
+`use-react-gfg` gives developers a drop-in React hook:
+```tsx
+const { data, isLoading, isError } = useGFG("your_username");
+```
+It returns structured data—total problems solved, difficulty breakdown (school, basic, easy, medium, hard), and score—ready to put into profile cards or charts on your portfolio.
 
-## Technical Decisions
+## How It's Built
 
-The package wraps the API work in a React-first interface with loading and error handling built in. That makes it easier to drop into a portfolio, dashboard, or profile card.
+- **Normalized Schema**: Cleans up raw profile data into straightforward, typed JavaScript objects.
+- **Async State Handling**: Provides standard `isLoading` and `isError` flags so you can show skeleton loaders easily.
+- **NPM Package Distribution**: Bundled as a lightweight package that adds almost zero size to your project.
 
-## Outcome
+## What It Means
 
-The package became part of my NPM tooling work, focused on reusable hooks that solve small but repeated developer problems.
+Used by peers across university batches to automate their coding stats on their portfolio websites.

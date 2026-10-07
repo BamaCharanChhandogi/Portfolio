@@ -1,31 +1,33 @@
 ---
-title: "Git-Finder"
-description: "A GitHub-powered developer community platform for profile discovery, repository exploration, and activity insights."
+title: "GitFinder - Developer Discovery & Community"
+description: "GitHub is great for hosting code but bad for discovering people. GitFinder lets developers log in with GitHub, explore peers by tech stack, and share project updates in a community feed."
 category: "Web Projects"
-stack: ["React.js", "GitHub APIs", "OAuth", "Firebase"]
+stack: ["React.js", "GitHub REST API", "OAuth 2.0", "Firebase Realtime DB", "Tailwind CSS"]
 image: "/projects/github.png"
 repo: "https://github.com/BamaCharanChhandogi/GitFinder"
 demo: "https://gitfinder.bamacharan.com/"
 featured: true
+priority: 72
 year: "2024"
 ---
 
-## Problem
+## The Problem
 
-GitHub profiles contain useful signals, but they are scattered across repositories, activity, contribution graphs, and user pages. The project needed to make developer discovery more social and easier to explore.
+GitHub is the place where developers spend all their time, but it's built around code repositories—not around finding other developers to build with. If you want to connect with other developers working in React or Python, or share what you're working on, GitHub's default layout doesn't really give you a social place to do that.
 
-## What I Built
+## How GitFinder Solves It
 
-GitFinder is a developer-community platform built around GitHub authentication. Users can sign in with GitHub, post updates, explore other developer profiles, inspect repositories, and follow activity signals.
+GitFinder connects directly with GitHub. You sign in with your GitHub account, and it turns your profile and repositories into a social card. You can:
+- Search and discover developers by their primary programming language and country.
+- Post updates about projects you are building.
+- Check stats like top languages and stars in one clean dashboard.
 
-The product combines profile discovery with social interactions such as posts, likes, comments, and following developers.
+## How It's Built
 
-## Technical Decisions
+- **React & Tailwind CSS**: Fast, responsive layout for browsing developer profiles.
+- **GitHub OAuth & REST API**: Quick login using your existing GitHub profile, pulling repos and contribution stats.
+- **Firebase Realtime Database**: Stores community posts, likes, and comments with instant updates.
 
-The app uses React for the interface, Firebase for authentication and backend services, and GitHub APIs for profile and repository data. OAuth keeps login familiar for developers and avoids creating a separate identity system.
+## What It Means
 
-Because the project was open to contributors, I also worked on contribution guidelines, issue flow, and pull-request review practices.
-
-## Outcome
-
-GitFinder became an open-source collaboration project accepted into GSSoC Extended and Hacktoberfest. I helped manage 20+ contributors and 40+ pull requests while building the core GitHub-powered experience.
+Accepted into **GSSoC Extended** and **Hacktoberfest 2024**. I led **20+ open-source contributors** who submitted and merged **40+ pull requests**, turning it into a real collaborative community project.

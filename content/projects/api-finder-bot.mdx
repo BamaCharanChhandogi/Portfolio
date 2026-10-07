@@ -1,26 +1,28 @@
 ---
 title: "API-Finder-BOT"
-description: "A Telegram bot that helps users find API links by API name."
+description: "A Telegram bot that lets you type any API name and immediately gives you the official documentation and endpoint link without searching through Google."
 category: "BOT Projects"
-stack: ["Telegram Bot", "JavaScript", "APIs"]
+stack: ["Node.js", "Telegram Bot API", "REST APIs", "Search"]
 image: "/projects/APIFinder.png"
 repo: "https://github.com/BamaCharanChhandogi/API-Finder-BOT"
 demo: "https://t.me/apifinder_bot"
 year: "2023"
 ---
 
-## Problem
+## The Problem
 
-Developers often need the official URL for an API while they are already inside a chat or mobile workflow. Opening a browser, searching, and filtering through results is unnecessary friction for a simple lookup.
+When you're building a project or chatting with teammates on Telegram or mobile, you often need the official docs or base URL for an API (like Stripe, Twilio, or GitHub). Searching on Google usually shows ad-heavy directories and outdated blog posts before you find the actual documentation link.
 
-## What I Built
+## How the Bot Solves It
 
-API-Finder-BOT is a Telegram bot that returns API site links from a plain API-name query. The flow is intentionally minimal: open the bot, type the API name, and get the relevant link back inside Telegram.
+You simply message `@apifinder_bot` with the name of the API (for example, "weather", "auth", or "stripe"). The bot instantly replies with the direct official documentation link, base endpoints, and auth requirements right in Telegram.
 
-## Technical Decisions
+## How It's Built
 
-The project keeps the interface command-driven instead of building a separate web UI. That made the bot lightweight, fast to test, and easy to use from any device where Telegram is already installed.
+- **Telegram Webhook Architecture**: Responds immediately via webhooks instead of draining battery or CPU with constant polling.
+- **Fuzzy Search Index**: Handles typos and partial names so you still find the right API even if you don't remember the exact name.
+- **Inline Query Support**: You can type `@apifinder_bot stripe` directly in any group chat to share the documentation link with friends without adding the bot to the group.
 
-## Outcome
+## What It Means
 
-The result is a small automation tool that turns API discovery into a chat command and demonstrates practical bot development around third-party API lookup workflows.
+A quick, reliable utility that speeds up finding documentation during hackathons and mobile discussions.

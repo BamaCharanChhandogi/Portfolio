@@ -1,26 +1,27 @@
 ---
-title: "ChromaBlend - VS Code Theme"
-description: "A colorful VS Code theme designed around a green, pink, and blue coding palette."
+title: "ChromaBlend - Balanced VS Code Theme"
+description: "Many code editor themes are either too dull or too bright. ChromaBlend is a balanced VS Code theme with clear syntax coloring that stays easy on your eyes during long sessions."
 category: "VS Code Extensions"
-stack: ["VS Code", "Theme", "Developer Experience"]
+stack: ["VS Code Extension API", "Design", "Color Theory", "Theme"]
 image: "/projects/VSCodeTheme.png"
 repo: "https://github.com/BamaCharanChhandogi/ChromaBlend"
 demo: "https://marketplace.visualstudio.com/items?itemName=BamaCharanChhandogi.chromablend"
 year: "2024"
 ---
 
-## Problem
+## The Problem
 
-Most editor themes are either too plain for long sessions or too visually loud for real work. I wanted a VS Code theme that had personality without destroying readability.
+Most editor themes either have washed-out colors where functions, variables, and keywords all look similar, or they use loud neon colors that give you eye strain after staring at code for 4 hours.
 
-## What I Built
+## How ChromaBlend Solves It
 
-ChromaBlend is a dynamic dark and light VS Code theme built around a green, pink, and blue coding palette. It gives the editor a recognizable look while keeping syntax elements separated clearly.
+ChromaBlend was designed with a carefully balanced palette based on soft greens, pinks, and blues over a deep dark background. Variables, functions, and string literals have clear, distinct colors without feeling visually aggressive or tiring.
 
-## Technical Decisions
+## How It's Built
 
-The theme focuses on contrast, token color hierarchy, and day-to-day comfort. Rather than adding UI clutter, the work is mostly in color decisions: syntax groups, editor background, active lines, and selection states.
+- **TextMate Scoping**: Carefully assigned token scopes so keywords, parameters, and comments stand out clearly across TypeScript, JavaScript, Python, and Java.
+- **Full Editor Theming**: Styled not just code text, but also the sidebar, tabs, terminal, and git diff markers for a consistent look.
 
-## Outcome
+## What It Means
 
-ChromaBlend became part of my developer-tooling set and helped me practice shipping polished VS Code Marketplace assets, not just application code.
+A polished, published developer theme on the VS Code Marketplace built for everyday comfort.

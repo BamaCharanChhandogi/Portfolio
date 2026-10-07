@@ -1,27 +1,33 @@
 ---
-title: "Mongoose to Postman Converter"
-description: "A VS Code extension that converts Mongoose schemas into Postman-ready request bodies with Google Generative AI."
+title: "Mongoose to Postman Converter (SchemaCraft)"
+description: "Testing Mongoose models usually means manually typing out sample JSON into Postman. This VS Code extension reads your schema and generates ready-to-test Postman payloads automatically."
 category: "VS Code Extensions"
-stack: ["VS Code Extension", "JavaScript", "Node.js", "MongoDB", "Google Generative AI"]
-image: "/projects/MongoPostman.png"
+stack: ["VS Code Extension", "TypeScript", "Node.js", "MongoDB", "Google Generative AI"]
+image: "/projects/SchemaCraft.png"
 repo: "https://marketplace.visualstudio.com/items?itemName=BamaCharanChhandogi.mongotest-schema-to-postman&ssr=false#review-details"
 demo: "https://marketplace.visualstudio.com/items?itemName=BamaCharanChhandogi.mongotest-schema-to-postman&ssr=false#review-details"
-featured: false
+featured: true
+priority: 80
 year: "2023"
 ---
 
-## Problem
+## The Problem
 
-Backend developers often need realistic Postman request bodies while testing Mongoose models. Manually translating schema fields into sample JSON is repetitive and easy to get wrong.
+Whenever you write a new Mongoose model in a Node.js project (like a user, product, or order schema), you have to test the API endpoint. That means opening Postman, looking back and forth at your schema file, and manually typing out a dummy JSON request body with names, emails, dates, and nested objects. It's repetitive and wastes 10–15 minutes per endpoint.
 
-## What I Built
+## How SchemaCraft Solves It
 
-Mongoose to Postman Converter is a VS Code extension that converts Mongoose schemas into Postman-ready request bodies. It turns schema structure into usable test data directly inside the editor.
+This VS Code extension does the work for you with one click. Right-click on any Mongoose schema file in your editor, and it:
+- Reads all the fields, types, and validation rules.
+- Uses AI to fill in realistic sample data (real-sounding names, valid emails, believable prices).
+- Creates a ready-to-import Postman collection or copies the JSON right to your clipboard.
 
-## Technical Decisions
+## How It's Built
 
-The extension keeps the workflow close to the source code: select or work from a schema, generate realistic request data, and move straight into API testing. Google Generative AI supports smarter sample generation where plain static mapping would be too limited.
+- **VS Code Extension API**: Runs inside the editor worker thread so it never freezes your coding interface.
+- **AST Parser**: Extracts field names, types, and default values directly from the code without needing to connect to a live MongoDB database.
+- **Generative AI**: Fills in realistic test values instead of boring dummy text like `"string1"` or `"string2"`.
 
-## Outcome
+## What It Means
 
-It is part of my VS Code extension set that crossed 3,000+ combined downloads, focused on removing small repeated tasks from everyday backend development.
+Published on the VS Code Marketplace and crossed 3,000+ total downloads across my tooling set, saving backend developers repetitive manual work every time they test a new route.

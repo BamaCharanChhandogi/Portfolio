@@ -1,30 +1,30 @@
 ---
-title: "Diabetes Prediction"
-description: "A machine-learning web project led during GSSoC, improved through contributor mentorship and testing."
+title: "Diabetes Prediction - ML Web Application"
+description: "A web app that predicts diabetes risk from health metrics with clear charts explaining the results. Led 30+ open-source contributors during GSSoC 2024 to build it."
 category: "Machine Learning Projects"
-stack: ["Machine Learning", "Python", "React", "Testing"]
+stack: ["Python", "Flask", "Scikit-Learn", "React", "Data Visualization", "Open Source"]
 image: "/projects/Diabetes.png"
 repo: "https://github.com/BamaCharanChhandogi/Diabetes-Prediction"
 demo: "https://diabetes-prediction-gamma.vercel.app/"
+featured: true
+priority: 68
 year: "2024"
 ---
 
-## Problem
+## The Problem
 
-Health-risk prediction tools can be hard to understand if the model result is shown without context. The project needed to collect user health inputs, produce a diabetes-risk prediction, and explain the surrounding patterns clearly enough for a general user.
+Most machine learning projects just spit out a single prediction percentage, which leaves regular users confused about why they got that result and which specific health factors (like glucose, BMI, or age) caused it.
 
-## What I Built
+## How It Solves It
 
-Diabetes Prediction combines a React front end with a Python/Flask machine-learning backend. Users can enter demographic and health data, receive a prediction, and review visualizations that explain relationships between risk factors.
+This web application lets users enter simple health metrics and immediately calculates their risk. Crucially, it includes interactive charts that visually show how their numbers compare to healthy reference ranges, making the prediction easy to understand and discuss with a doctor.
 
-The product includes a prediction page, a visualization page, and an about page that explains the project mission and data-security intent.
+## How It's Built
 
-## Technical Decisions
+- **Python Flask Backend**: Runs the trained scikit-learn machine learning classification pipeline.
+- **React Frontend**: Clean, responsive form interface with input validation.
+- **Visual Analytics**: Interactive graphs built with Seaborn and Matplotlib showing which risk factors contributed most to the prediction.
 
-The front end uses React, JavaScript, HTML, CSS, and Tailwind CSS for the user experience. The backend uses Python and Flask, with pandas and scikit-learn for data processing and prediction. Matplotlib and Seaborn support the visualization layer.
+## What It Means
 
-During GirlScript Summer of Code 2024, I worked as Project Admin and Mentor. My focus was not only feature work, but contributor coordination, review quality, testing, and making the UI responsive.
-
-## Outcome
-
-I led 30+ contributors, reviewed and merged 60+ pull requests, improved model accuracy by 15%, and added automated testing plus responsive UI improvements.
+I served as **Project Admin and Mentor** during **GirlScript Summer of Code (GSSoC) 2024**, guiding **30+ contributors**, reviewing and merging **60+ pull requests**, and improving overall prediction accuracy by 15% through community collaboration.

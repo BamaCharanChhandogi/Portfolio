@@ -1,26 +1,32 @@
 ---
-title: "Use React Summary"
-description: "An NPM package that gives React apps a reusable text-summary hook backed by generative AI."
+title: "use-react-summary - AI Summarization Hook"
+description: "A lightweight React hook published on NPM that lets developers add AI-powered text summarization to their apps with just a couple lines of code."
 category: "JavaScript NPM Packages"
-stack: ["JavaScript", "React", "Node.js", "API Integration"]
+stack: ["TypeScript", "React", "Google Generative AI", "NPM Package", "Custom Hooks"]
 image: "/projects/usereactsummary.png"
 repo: "https://github.com/BamaCharanChhandogi/use-react-summary"
 demo: "https://www.npmjs.com/package/use-react-summary"
 year: "2023"
 ---
 
-## Problem
+## The Problem
 
-Many React apps need a quick way to summarize long text, but wiring an AI SDK, loading state, error handling, and Markdown output repeatedly creates unnecessary setup work.
+Adding AI text summarization to a React app usually means writing a lot of repetitive code: calling the API, managing loading spinners, catching network errors, formatting the returned markdown, and handling component unmounts. If you have several pages or apps that need summarization, you end up copying and pasting that same logic every time.
 
-## What I Built
+## How the Package Solves It
 
-Use React Summary is an NPM package that exposes a `useSummary` hook for AI-powered text summarization. Developers pass text and an optional word count, then receive summarized Markdown output plus loading and error states.
+`use-react-summary` wraps that whole process into an easy-to-use custom hook. You simply call:
+```tsx
+const { summary, loading, error, summarize } = useSummary(apiKey);
+```
+Pass in your text, and you get back formatted summary text along with loading states ready to plug into your UI.
 
-## Technical Decisions
+## How It's Built
 
-The package uses Google Generative AI and returns a React-friendly API. It keeps the hook small, handles common failure states, and outputs Markdown so summaries can be rendered cleanly in content-heavy interfaces.
+- **Custom Hook Pattern**: Standard React hook design with clean state transitions.
+- **TypeScript First**: Full type definitions included so you get autocomplete for all options in your editor.
+- **Request Cancellation**: Uses `AbortController` so ongoing AI requests cancel cleanly if the user navigates away or types something new.
 
-## Outcome
+## What It Means
 
-It was built as part of a pair of NPM packages that reached 300+ monthly downloads, with a focus on making AI integration easier for frontend developers.
+Published to NPM and reached hundreds of monthly downloads, helping other developers integrate AI features into their React projects easily.

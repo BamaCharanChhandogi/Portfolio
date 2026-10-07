@@ -1,0 +1,39 @@
+---
+title: "Engram - The Cognitive Retention Layer for AI Coding"
+description: "Developers use AI tools like Cursor to write code fast, but quickly forget what was built. Engram tests you on yesterday's AI-generated code with quick morning recall questions so you never lose touch with your own codebase."
+category: "AI & Dev Tools"
+stack: ["Next.js 15", "TypeScript", "Drizzle ORM", "Neon Postgres", "Gemini 3.6 Flash", "Tailwind CSS"]
+image: "/projects/engram.png"
+repo: "https://github.com/BamaCharanChhandogi/Engram"
+demo: "https://engram.bamacharan.com/"
+featured: true
+priority: 100
+year: "2026"
+---
+
+## The Problem
+
+Almost every developer is using AI tools like Cursor, Claude Code, or GitHub Copilot to ship code faster today. It feels great while you're writing it, but a few days later, you barely remember what the AI generated. 
+
+When a bug pops up in production or an interviewer asks you why a module was built a certain way, you end up staring at code you supposedly "wrote", completely stuck. You shipped fast, but you didn't actually learn or retain the architecture.
+
+## How Engram Solves It
+
+Engram sits quietly in your IDE as a background hook. Whenever you use Cursor, Claude, or Antigravity, it notices the prompts and code changes you made—with zero lag or interruptions.
+
+Every morning, Engram gives you a quick 5-minute challenge with 3 questions based directly on what your AI wrote yesterday. For example:
+- *"Why did we use a transaction in yesterday's database query?"*
+- *"What does this helper function return if the API fails?"*
+
+By answering these quick questions, you actively think through the code instead of passively accepting it.
+
+## How It's Built
+
+- **Next.js 15 & Tailwind CSS**: Clean web interface and practice dashboard with fast server-side rendering.
+- **Neon Postgres & Drizzle ORM**: Stores your code snippets, review history, and spaced repetition schedules reliably.
+- **Google Gemini Flash**: Reviews what changed yesterday and writes 3 clear, relevant test questions tailored to your session.
+- **Lightweight IDE Hooks**: Runs in the background with zero lag, so your editor stays fast.
+
+## What It Means
+
+You get the best of both worlds: the speed of AI code generation, but with real understanding and memory of what was actually built.

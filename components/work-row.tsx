@@ -16,8 +16,8 @@ export function WorkRow({ index, title, description, tags, href, image, featured
       <span className="no">{index}</span>
       <div className="mid">
         <h3>
-          {title}
-          {featured ? <small>★ Featured</small> : null}
+          <span>{title}</span>
+          {featured ? <span className="flagship-badge">★ Featured</span> : null}
         </h3>
         <p>{description}</p>
       </div>

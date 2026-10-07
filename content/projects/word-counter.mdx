@@ -1,26 +1,32 @@
 ---
-title: "Word Counter"
-description: "A React app for counting words and reviewing basic text metrics."
+title: "Word Counter & Text Tools"
+description: "A quick React tool that calculates word counts, character limits, and estimated reading time as you type."
 category: "Simple Projects"
-stack: ["React", "Text Tools", "Frontend"]
+stack: ["React.js", "Text Metrics", "Frontend", "CSS3"]
 image: "/projects/Wordcounter.png"
 repo: "https://github.com/BamaCharanChhandogi/Word-Counter"
 demo: "https://bamacharanchhandogi.github.io/Word-Counter/"
 year: "2022"
 ---
 
-## Problem
+## The Problem
 
-Writers and students often need quick text metrics without opening a heavy editor. A word counter is small, but it requires immediate feedback and clean input handling.
+When writing college essays, job applications, or tweets, you constantly have to check word or character limits. Opening heavy word processors just to check a character count is slow, and random online counters are filled with annoying ads.
 
-## What I Built
+## How It Solves It
 
-Word Counter is a React utility that turns raw input text into useful counts and writing metrics.
+This is a clean, ad-free text utility built in React. You paste or type your text, and it immediately calculates:
+- Total words and characters (with and without spaces).
+- Number of sentences and paragraphs.
+- Estimated reading and speaking time.
+- Quick buttons to convert text to UPPERCASE, lowercase, or copy to clipboard.
 
-## Technical Decisions
+## How It's Built
 
-The project focuses on responsive input updates, simple derived state, and a clear interface for scanning results quickly.
+- **Derived React State**: Calculates all numbers instantly on every keystroke without lag.
+- **Regex Parsing**: Accurately counts words even with punctuation, hyphenated terms, and multiple spaces.
+- **Clipboard API**: One-click button to copy modified text back to your clipboard.
 
-## Outcome
+## What It Means
 
-The app is a compact practice project for React state, controlled inputs, and utility-style UI.
+A simple, practical tool that practiced controlled inputs and real-time text analysis in React.

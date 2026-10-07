@@ -1,26 +1,28 @@
 ---
-title: "Countdown Timer"
-description: "A timer application built with HTML, CSS, and JavaScript."
+title: "Stopwatch & Countdown Timer"
+description: "A stopwatch and countdown timer built in vanilla JavaScript that tracks elapsed time accurately without clock drift from browser tab throttling."
 category: "Simple Projects"
-stack: ["HTML", "CSS", "JavaScript"]
+stack: ["JavaScript", "HTML5", "CSS3", "DOM Manipulation"]
 image: "/projects/Stopwatch.png"
 repo: "https://github.com/BamaCharanChhandogi/Stopwatch"
 demo: "https://bamacharanchhandogi.github.io/Stopwatch/"
 year: "2022"
 ---
 
-## Problem
+## The Problem
 
-Timer interfaces look simple, but they force you to handle state, time updates, and user controls cleanly. This made it a useful early JavaScript project.
+Making a timer in JavaScript seems very easy at first, but using a basic `setInterval` causes the clock to slowly drift and become inaccurate when you switch browser tabs or your laptop sleeps.
 
-## What I Built
+## How It Solves It
 
-Countdown Timer is a browser-based timer application built with HTML, CSS, and JavaScript. It covers the core interaction loop of starting, stopping, and displaying time changes in the UI.
+This project builds both a high-precision stopwatch and countdown timer. Instead of just adding numbers every second, it calculates the exact time difference between the current moment and when you pressed start (`performance.now()`), so the clock stays 100% accurate even if the tab is running in the background.
 
-## Technical Decisions
+## How It's Built
 
-I kept the project dependency-free so the focus stayed on DOM updates, interval timing, and responsive layout fundamentals.
+- **Timestamp Delta Calculation**: Keeps lap times and countdowns accurate down to the millisecond.
+- **Lap Recorder**: Saves split laps in a clean scrollable list so you can track lap intervals.
+- **Keyboard Shortcuts**: Start and stop with `Space`, reset with `R`, and log laps with `L`.
 
-## Outcome
+## What It Means
 
-The project helped establish the basics of client-side state management before moving into larger React applications.
+A fun exercise in browser event loops and understanding how JavaScript handles time and intervals.

@@ -13,14 +13,14 @@ const experience = [
   {
     role: "Full Stack Engineer",
     company: "ClipWise",
-    period: "Mar 2025 — Present",
+    period: "Sep 2025 — Sep 2026",
     detail:
       "Built and launched Shopify and GoHighLevel apps enabling merchants and agencies to generate AI-powered short-form videos directly from their platforms. Engineered Shopify APIs, GoHighLevel OAuth, authentication, webhook events, and embedded third-party dashboard flows.",
   },
   {
     role: "Software Developer Intern",
     company: "Ikarus 3D",
-    period: "Mar 2024 — Mar 2025",
+    period: "Mar 2025 — Aug 2025",
     detail:
       "Engineered a serverless AWS backend with Lambda, API Gateway, and DynamoDB handling 1k+ API requests per day with about 400ms latency. Developed 3+ production-ready 3D product configurators using Three.js, React, and TypeScript, plus a 360-degree image viewer with shareable embed links.",
   },

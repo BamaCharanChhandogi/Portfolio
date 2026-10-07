@@ -19,6 +19,7 @@ export type Frontmatter = {
   repo?: string;
   demo?: string;
   featured?: boolean;
+  priority?: number;
   year?: string;
   externalUrl?: string;
   source?: "local" | "hashnode";
@@ -65,6 +66,7 @@ export function getEntry(kind: ContentKind, slug: string): ContentEntry {
     repo: data.repo,
     demo: data.demo,
     featured: Boolean(data.featured),
+    priority: typeof data.priority === "number" ? data.priority : undefined,
     year: data.year,
     externalUrl: data.externalUrl,
     source: data.source ?? "local",
@@ -78,6 +80,16 @@ export function getEntries(kind: ContentKind) {
   return getSlugs(kind)
     .map((slug) => getEntry(kind, slug))
     .sort((a, b) => {
+      if (kind === "projects") {
+        if (Boolean(a.featured) !== Boolean(b.featured)) {
+          return a.featured ? -1 : 1;
+        }
+        const aPri = a.priority ?? 0;
+        const bPri = b.priority ?? 0;
+        if (aPri !== bPri) {
+          return bPri - aPri;
+        }
+      }
       const aDate = a.publishedAt ?? a.year ?? "";
       const bDate = b.publishedAt ?? b.year ?? "";
       return bDate.localeCompare(aDate);

@@ -1,24 +1,28 @@
 ---
-title: "Auto Reload Backend"
-description: "A VS Code extension for restarting backend development servers automatically during local Node.js work."
+title: "Auto Reload Backend - VS Code Extension"
+description: "A VS Code extension that automatically restarts your Node.js backend when you save code changes, saving developers from manually stopping and restarting the server in terminal."
 category: "VS Code Extensions"
-stack: ["VS Code Extension", "JavaScript", "Node.js", "Developer Tools"]
+stack: ["VS Code Extension API", "TypeScript", "Node.js", "Process Management"]
 image: "/projects/codeEditor.png"
+repo: "https://marketplace.visualstudio.com/items?itemName=BamaCharanChhandogi.auto-reload-backend"
+demo: "https://marketplace.visualstudio.com/items?itemName=BamaCharanChhandogi.auto-reload-backend"
 year: "2023"
 ---
 
-## Problem
+## The Problem
 
-While building Node.js backends, the repeated edit, stop server, restart server loop slows down local development. It is especially annoying during small controller, route, or middleware changes.
+When developing Node.js backend servers, every small edit in your routes or middleware means stopping the server (`Ctrl+C`), running the start command again, and waiting for it to bind. While tools like Nodemon exist, they often fail with `EADDRINUSE` port clashes or leave orphaned processes running in the background when something crashes.
 
-## What I Built
+## How It Solves It
 
-Auto Reload Backend is a VS Code extension focused on faster local backend iteration. It reduces the manual restart cycle so developers can keep their attention on the code they are changing.
+This extension watches your project files and manages the restart process cleanly inside VS Code. When you save a file in `src/` or `controllers/`, it gracefully terminates the old process, frees the port, and restarts the server automatically.
 
-## Technical Decisions
+## How It's Built
 
-I kept the tool inside the editor because that is where the workflow happens. The extension is small by design: it solves one developer-experience problem instead of becoming a full process manager.
+- **VS Code Terminal API**: Connects directly to VS Code's integrated terminal, sending clean restart signals without creating phantom processes.
+- **Debounced File Watching**: Waits a split second after you save to avoid triggering multiple restarts when saving multiple files at once.
+- **Status Bar Toggle**: Gives you an easy button in the bottom bar to pause auto-reloading whenever you want.
 
-## Outcome
+## What It Means
 
-The project sits alongside Java Easy Snippet and Mongoose to Postman Converter as part of a VS Code extension set that crossed 3,000+ combined downloads.
+Part of my developer extension suite that reached 3,000+ downloads on the marketplace, solving an everyday annoyance for backend Node developers.

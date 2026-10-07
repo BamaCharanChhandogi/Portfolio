@@ -1,26 +1,31 @@
 ---
-title: "Quora Clone"
-description: "A question-and-answer application inspired by Quora, built with React and Redux."
+title: "Quora Clone - Q&A Web App"
+description: "A question-and-answer web app built with React and Redux to practice complex state management like nested comment threads, upvotes, and topic filtering."
 category: "Web Projects"
-stack: ["React", "Redux", "Q&A", "Frontend"]
+stack: ["React.js", "Redux Toolkit", "State Management", "Frontend"]
 image: "/projects/quora.png"
 repo: "https://github.com/BamaCharanChhandogi/Quora-Clone"
 demo: "https://quora-clone-eight.vercel.app/"
 year: "2024"
 ---
 
-## Problem
+## The Problem
 
-Question-and-answer products depend on clear posting flows, answer browsing, and state updates that feel natural. Recreating that interaction model is a useful React architecture exercise.
+Q&A platforms like Quora are deceptively complex under the hood. You have questions with multiple answers, nested comments, live upvote/downvote counts, and topic filters. If your state isn't organized properly, clicking "upvote" on one answer can accidentally re-render the whole screen or cause state sync bugs.
 
-## What I Built
+## How It Solves It
 
-Quora Clone recreates the core Q&A experience: asking questions, reading answers, and navigating user-generated content in a familiar layout.
+This project recreates the full Quora interaction flow to test and master Redux state management:
+- Asking questions and submitting answers.
+- Upvoting and downvoting with immediate feedback.
+- Browsing questions filtered by topics like Technology, Science, and Design.
 
-## Technical Decisions
+## How It's Built
 
-The project uses React and Redux to manage shared application state across the Q&A interface. Redux was useful here because questions, answers, and UI actions need to stay coordinated across multiple components.
+- **Redux Toolkit**: Normalizes questions and answers into predictable state slices so updates are clean and isolated.
+- **Optimistic UI**: When you click upvote, the number updates on your screen instantly while the action is processed.
+- **Modular Components**: Reusable UI cards for questions, user badges, and answer threads.
 
-## Outcome
+## What It Means
 
-The project strengthened my understanding of Redux patterns, reusable UI composition, and content-driven product flows.
+A hands-on exercise in handling complex, high-density user state without performance lag.

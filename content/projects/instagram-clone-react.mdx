@@ -1,25 +1,30 @@
 ---
-title: "Basic Social Media with React"
-description: "A basic social media application using React, Material UI, and Firebase authentication."
+title: "Instagram Clone"
+description: "A social media feed built with React and Firebase handling user login, photo uploads, and live comment updates."
 category: "Simple Projects"
-stack: ["React", "Material UI", "Firebase"]
+stack: ["React.js", "Firebase Auth", "Cloud Firestore", "Material UI"]
 image: "/projects/instaclone-basic.png"
 repo: "https://github.com/BamaCharanChhandogi/instagram-clone-react"
 year: "2023"
 ---
 
-## Problem
+## The Problem
 
-Social-media interfaces combine authentication, feeds, profile state, and repeated UI patterns. Rebuilding a small version is a practical way to understand how those pieces fit together.
+Connecting a frontend framework like React to a live cloud database is a big learning hurdle: you have to handle user authentication, file uploads, and make sure new posts and comments appear on everyone's screen in real time.
 
-## What I Built
+## How It Solves It
 
-This project is a basic social-media application using React, Material UI, and Firebase. It explores sign-in flows, feed-style layouts, and simple user interactions.
+This project builds the basic mechanics of Instagram:
+- Users can create accounts and log in securely.
+- Upload images with captions.
+- Leave comments on posts with updates syncing immediately using live database listeners.
 
-## Technical Decisions
+## How It's Built
 
-Firebase handled the backend and authentication layer so the project could focus on front-end state, component structure, and user-facing flows.
+- **React & Material UI**: Clean mobile-style card layout with avatar icons and action buttons.
+- **Firebase Auth**: Manages user accounts and persistent login sessions.
+- **Cloud Firestore**: Real-time NoSQL database so posts and comments update live.
 
-## Outcome
+## What It Means
 
-The project helped me practice full-stack product mechanics at a small scale: auth, persisted user data, and interface composition.
+A great early milestone in building full-stack applications with real authentication and live cloud storage.

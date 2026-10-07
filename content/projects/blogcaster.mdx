@@ -1,31 +1,32 @@
 ---
-title: "BlogCaster - AI-Powered Blogging Platform"
-description: "A cloud-hosted MCP server for publishing, listing, and deleting posts across blogging platforms from MCP-enabled clients."
+title: "BlogCaster - Multi-Platform MCP Publishing Server"
+description: "Publishing a blog across Hashnode, Dev.to, and WordPress means copying and pasting Markdown three times. BlogCaster is an MCP tool that lets your AI assistant publish to all of them in one command."
 category: "Web Projects"
-stack: ["Cloudflare Workers", "Durable Objects", "TypeScript", "REST APIs"]
+stack: ["Cloudflare Workers", "Durable Objects", "TypeScript", "REST APIs", "MCP"]
 image: "/projects/Blogcaster.png"
 repo: "https://github.com/BamaCharanChhandogi/BlogCaster-MCP"
 demo: "https://blogcaster-mcp.rrpb2580.workers.dev/"
 featured: true
+priority: 90
 year: "2026"
 ---
 
-## Problem
+## The Problem
 
-Writing with AI tools creates a publishing gap: the draft can be produced inside Claude Desktop, Cursor, or Cline, but publishing still means opening each platform, copying Markdown, managing tokens, and repeating the same steps across Hashnode, Dev.to, and WordPress.
+When you write technical articles with AI assistance (like in Claude Desktop or Cursor), getting the finished post published is still a hassle. You have to open three different browser tabs, paste Markdown, fix formatting quirks, upload headers, and deal with separate API tokens across Hashnode, Dev.to, and WordPress. 
 
-## What I Built
+## How BlogCaster Solves It
 
-BlogCaster is an MCP server that lets an AI client publish, list, and delete posts across multiple blogging platforms. It supports both a hosted Cloudflare Worker endpoint and an NPM package for local stdio transport.
+BlogCaster connects to your AI assistant using the Model Context Protocol (MCP). Instead of manual copy-pasting, you can just tell your AI: *"Publish this article to Hashnode and Dev.to."*
 
-The tool exposes a small set of actions: generate a secure token-management link, publish Markdown content, fetch recent blog posts, and delete posts by platform ID.
+The server takes your Markdown, sets the title, handles tags, preserves canonical links, and publishes everything directly through their official APIs.
 
-## Technical Decisions
+## How It's Built
 
-The hosted runtime runs on Cloudflare Workers so users can connect without installing a backend. Durable Objects isolate token state per session, which keeps platform credentials scoped and avoids mixing users across MCP sessions.
+- **Cloudflare Workers**: Hosted at the edge so it runs globally with almost zero latency and no server maintenance.
+- **Durable Objects**: Keeps session state and API tokens separate for each user, so credentials never get mixed up.
+- **Dual Support**: Works as a hosted cloud endpoint for remote AI clients and as an installable NPM package for local desktop editors.
 
-I treated security and setup friction as the main product constraints. Sessions are intentionally ephemeral, token management happens through a dedicated link, and the MCP surface area stays narrow enough for AI clients to call reliably.
+## What It Means
 
-## Outcome
-
-The project turns a multi-platform publishing workflow into a single AI-tool command path. It supports Hashnode, Dev.to, and WordPress today, with Medium left as a planned platform.
+It turns a tedious 15-minute publishing chore into a single natural-language command inside your editor.

@@ -1,26 +1,31 @@
 ---
 title: "To-Do List App"
-description: "A small task management app built with HTML, CSS, and React."
+description: "A simple task manager in React that saves your tasks to browser storage so your to-do list stays saved even when you refresh."
 category: "Simple Projects"
-stack: ["React", "HTML", "CSS"]
+stack: ["React.js", "LocalStorage", "HTML5", "CSS3"]
 image: "/projects/To-do.png"
 repo: "https://github.com/BamaCharanChhandogi/To-Do-List"
 demo: "https://bamacharanchhandogi.github.io/To-Do-List/"
 year: "2022"
 ---
 
-## Problem
+## The Problem
 
-Task apps are a compact way to practice the essentials of interactive UI: input handling, state updates, rendering lists, and clearing completed work.
+Beginner task apps often lose everything you typed the moment you accidentally close or refresh your browser tab. Building a task app that properly persists state and updates cleanly is the quintessential first milestone in learning React.
 
-## What I Built
+## How It Solves It
 
-To-Do List App is a small task-management interface built with React, HTML, and CSS. It covers creating, tracking, and updating tasks in a client-side experience.
+This is an interactive daily task planner built in React:
+- Add, complete, and delete tasks with instant UI updates.
+- Automatically saves tasks to your browser's local storage so nothing gets lost.
+- Filter between All, Active, and Completed tasks.
 
-## Technical Decisions
+## How It's Built
 
-I kept the application simple so the focus stayed on component state, event handling, and list rendering rather than backend complexity.
+- **React State**: Uses clean state updates to manage the task list without direct DOM manipulation.
+- **LocalStorage Sync**: Loads saved tasks as soon as the app mounts.
+- **Responsive Styling**: Works cleanly on mobile and desktop screens.
 
-## Outcome
+## What It Means
 
-The project became a practical stepping stone for building more complex React interfaces with predictable state changes.
+A milestone project that cemented my early understanding of React component state, props, and browser storage.

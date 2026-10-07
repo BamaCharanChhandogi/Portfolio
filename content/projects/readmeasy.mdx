@@ -1,27 +1,32 @@
 ---
-title: "READMEasy - AI README Generator"
-description: "A web platform that helps generate useful README files from project details."
+title: "READMEasy - Quick AI README Generator"
+description: "Writing a good GitHub README takes too long, so most repos end up with bare-bones docs. READMEasy turns your project details into a complete, well-structured README with live preview."
 category: "Web Projects"
-stack: ["React", "AI", "Markdown", "Developer Tools"]
+stack: ["React", "TypeScript", "Tailwind CSS", "Google Gemini AI", "Markdown AST"]
 image: "/projects/ReadmeG.png"
 repo: "https://github.com/BamaCharanChhandogi/READMEasy"
 demo: "https://readm-easy.vercel.app/"
 featured: true
+priority: 75
 year: "2024"
 ---
 
-## Problem
+## The Problem
 
-Good README files are important, but many projects ship with incomplete setup instructions, weak feature summaries, or no clear usage path. Developers often know what they built but still need help turning that into polished documentation.
+A lot of developers build great projects but put minimal effort into their GitHub README because writing documentation feels slow and unexciting. As a result, recruiters and other developers skip past the repository because there are no clear setup steps, feature summaries, or screenshots.
 
-## What I Built
+## How READMEasy Solves It
 
-READMEasy is an AI-powered README generator. Users provide project details through an interactive form, choose optional sections, preview the result in Markdown or rendered form, and copy the generated README into their repository.
+READMEasy gives you an interactive form where you just fill in the basics: what the project does, key features, install commands, and tech stack. 
 
-## Technical Decisions
+It then generates a complete, clean GitHub README with proper badges, installation code blocks, and markdown structure. You can edit the text and see a live side-by-side preview before copying it to your clipboard.
 
-The app keeps the workflow visual and editable instead of returning a one-shot blob of text. Real-time preview helps users catch formatting issues before copying, while optional sections let the README match the project instead of forcing a rigid template.
+## How It's Built
 
-## Outcome
+- **React & Tailwind CSS**: Clean dual-panel editor with instant markdown rendering.
+- **Google Gemini**: Drafts crisp feature explanations and setup guides from your bullet points.
+- **Client-Side Only**: Runs fast in your browser without requiring an account or saving your code on external servers.
 
-The project targets a real developer workflow and connects AI generation with practical documentation output: project overview, features, installation, usage, images, and contribution notes.
+## What It Means
+
+Helped dozens of developers turn empty, unappealing repos into professional-looking GitHub showcases in under 2 minutes.

@@ -1,26 +1,31 @@
 ---
-title: "Food Recipe"
-description: "A recipe discovery app using HTML, CSS, JavaScript, and an external API."
+title: "Chitkara Mess & Recipe Finder"
+description: "A recipe search app built with vanilla JavaScript that lets you search by ingredients to find dishes and preparation steps quickly."
 category: "Simple Projects"
-stack: ["HTML", "CSS", "JavaScript", "API"]
+stack: ["JavaScript", "REST APIs", "HTML5", "CSS3"]
 image: "/projects/Food-Recipe.png"
 repo: "https://github.com/BamaCharanChhandogi/Chitkara-Mess"
 demo: "https://bamacharanchhandogi.github.io/Chitkara-Mess/"
 year: "2022"
 ---
 
-## Problem
+## The Problem
 
-API projects are only useful if the data becomes easy to search, scan, and act on. Recipe content is a good test case because users need quick visual and text feedback.
+When cooking in college hostels or at home, you often have random ingredients in your kitchen and want to quickly figure out what you can cook. Most commercial recipe websites are stuffed with huge personal stories and pop-ups before you can find the actual ingredient list.
 
-## What I Built
+## How It Solves It
 
-Food Recipe is a small recipe discovery app built with HTML, CSS, JavaScript, and an external API. It fetches recipe data and renders it in a compact interface.
+This project is a clean, no-distraction recipe finder:
+- Type in whatever ingredients you have.
+- Browse recipe cards with dish photos, prep time, and calorie counts.
+- Click to view simple, step-by-step cooking instructions.
 
-## Technical Decisions
+## How It's Built
 
-I kept the stack simple and focused on fetch logic, loading states, search behavior, and readable result cards instead of framework complexity.
+- **JavaScript Fetch**: Asynchronously pulls recipes from a public culinary API.
+- **Debounced Search**: Delays the search slightly as you type to prevent sending too many API requests.
+- **Responsive Grid**: Looks clean on mobile so you can keep it open on the kitchen counter while cooking.
 
-## Outcome
+## What It Means
 
-The project was an early exercise in connecting a browser UI to external data and turning raw API responses into a usable experience.
+A fun, practical tool built to solve everyday meal planning questions without navigating ad-heavy recipe blogs.

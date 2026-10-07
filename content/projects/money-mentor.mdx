@@ -1,29 +1,33 @@
 ---
-title: "Money Mentor"
-description: "A full-stack finance platform for expense tracking, investments, and AI-powered insights."
+title: "Money Mentor - Financial Analytics & AI Insights"
+description: "Most budget apps just list old transactions without helping you plan. Money Mentor tracks shared family expenses in real time and uses AI to give practical advice on where you are overspending."
 category: "Web Projects"
-stack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"]
+stack: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "Google Gemini AI", "Tailwind CSS"]
 image: "/projects/MoneyMentor.png"
 repo: "https://github.com/BamaCharanChhandogi/Money-Mentor"
 demo: "https://moneymentor.bamacharan.com/"
 featured: true
+priority: 85
 year: "2024"
 ---
 
-## Problem
+## The Problem
 
-Personal finance tools often show transactions without helping users understand patterns or make better decisions. Money Mentor was built to connect expense tracking, budget visibility, investment context, and AI guidance in one dashboard.
+Most budgeting apps are just digital receipt books: you enter what you spent, and they show you a list. But they don't help you understand your spending patterns or give advice on how to actually save money before the month ends. If you're managing expenses with family or roommates, coordinating who paid what is even more chaotic.
 
-## What I Built
+## How Money Mentor Solves It
 
-Money Mentor is a full-stack financial management application for tracking expenses, analyzing spending behavior, viewing investment insights, and sharing family expenses. It includes real-time budget tracking, categorized reports, a dynamic financial-health score, and AI-powered advice through Google Gemini.
+Money Mentor gives you a live financial dashboard that does two main things:
+1. **Live Family Budgeting**: Whenever someone logs an expense, it updates instantly across everyone's screen using WebSockets.
+2. **AI Spending Review**: Instead of just raw charts, Google Gemini reviews your last 30 days of expenses and gives you straightforward, human advice on where your money is going and what to cut back on.
 
-## Technical Decisions
+## How It's Built
 
-The frontend uses React with Vite and Tailwind CSS. The backend uses Node.js, Express.js, MongoDB with Mongoose, JWT authentication, Socket.io for real-time behavior, Plaid API for banking integration, and Google Generative AI for financial guidance.
+- **React & Tailwind CSS**: Fast, responsive frontend dashboard with dark and light themes.
+- **Node.js, Express & MongoDB**: REST API backend with secure JWT authentication and password hashing.
+- **Socket.io**: Real-time synchronization so shared expense rooms update without refreshing.
+- **Google Gemini**: Formats raw monthly expense numbers into an easy-to-read financial health score.
 
-I structured the application as separate client and server apps so the dashboard UI, API layer, authentication, and data workflows could evolve independently.
+## What It Means
 
-## Outcome
-
-The project shipped as a production deployment and became one of my strongest full-stack builds because it combines authentication, data modeling, real-time updates, third-party APIs, and AI features in one product.
+A complete full-stack web application that solved real everyday budgeting headaches by combining live multi-user sync with practical AI insights.
